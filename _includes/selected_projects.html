@@ -1,40 +1,10 @@
 <div class="projects">
-    <h2>Projects</h2>
-    <!-- <div class="table-responsive">
-    <table class="table table-sm table-borderless"> -->
+    <h2>projects</h2>
     <!-- Display projects without categories -->
     {% assign sorted_projects = site.projects | sort: "importance" %}
       <!-- Generate cards for each project -->
         {% for project in sorted_projects %}
             {% include projects2.html %}
         {% endfor %}
-        <!-- </table>
-      </div> -->
-  
   </div>
   
-
-  <!-- <div class="news">
-    <h2>news</h2>
-    {% if site.news  %}
-      <div class="table-responsive">
-        <table class="table table-sm table-borderless">
-        {% assign news = site.news | reverse %}
-        {% for item in news limit: site.news_limit %}
-          <tr>
-            <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
-        </table>
-      </div>
-    {% else %}
-      <p>No news so far...</p>
-    {% endif %}
-  </div> -->

@@ -4,14 +4,14 @@
     {% else %}
     <a href="{{ project.url | relative_url }}">
     {% endif %}
-      <div class="card", style="width: 50rem;">
+      <div class="card hoverable mb-3", style="max-width: 750px;">
         <div class="row no-gutters">
-            <div class="col-sm-5" style="background: #868e96;">
+            <div class="col-md-5" style="background: #868e96;">
                 {% if project.img %}
-                    <img src="{{ project.img | relative_url }}" alt="project thumbnail">
+                    <img src="{{ project.img | relative_url }}" class="card-img" alt="project thumbnail">
                 {% endif %}
             </div> 
-            <div class="col-sm-7">    
+            <div class="col-md-7">    
         <div class="card-body">
           <h2 class="card-title text-lowercase">{{ project.title }}</h2>
           <p class="card-text">{{ project.description }}</p>
