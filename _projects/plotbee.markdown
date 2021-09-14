@@ -2,7 +2,8 @@
 layout: page
 title: plotbee
 description: Plotbee is a library to process, manage and visualize pose-based detections of bees.
-img: /assets/img/12.jpg
+img: /assets/img/plotbee.gif
+github: https://github.com/jachansantiago/plotbee
 importance: 1
 ---
 
@@ -122,6 +123,8 @@ vplt.contact_sheet(pollen_bees[:20])
 
 #### Tag Detection
 
+In our setup, some individuals carries a marker to be recognize in long-term monitoring. More information about this tag setup in the [paper](https://doi.org/10.1145/3359115.3359120){:target="_blank"}. Plotbee includes detection of tags using an implemetation of [Apriltags](https://github.com/AprilRobotics/apriltag){:target="_blank"}. 
+
 ```python
 # Tag Detection
 video.tag_detection()
@@ -144,4 +147,8 @@ vplt.tagged_contact_sheet(tagged_bees[:20])
 <div class="caption">
     Contact sheet of bees detected with tags. 
 </div>
+
+### Conclusion
+
+This is just an overview of the plotbee library to show the power of this library, but there some features that are not explained here.
 
