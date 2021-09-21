@@ -19,29 +19,31 @@ pagination:
     <h2>{{ site.blog_description }}</h2>
   </div>
 
-
-
-
-
   <ul class="post-list">
     {% for post in paginator.posts %}
+    <div class="container">
+  
+      <div class="row">
+      <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+      </div>
+      <div class="row">
+      <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
+    </div>
+    
     <div class="row no-gutters">
-      
-      <div class="col-md-3" style="background: #ffffff;">
+      <div class="col-sm-3" style="background: #ffffff;">
           {% if post.img %}
               <img src="{{ post.img | relative_url }}" class="card-img" alt="project thumbnail">
           {% endif %}
       </div>
-
       <div class="col-md-9">    
         <div class="card-body">
-          <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-              <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
               <p>{{ post.description }}</p>
         </div>
-        </div>
-      
-  </div>
+      </div>
+      </div>
+    </div>
+    <div class="container"></div>
     {% endfor %}
   </ul>
 
