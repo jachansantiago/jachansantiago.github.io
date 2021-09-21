@@ -323,7 +323,8 @@ for i, idx in enumerate(random_idx):
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/imgs/pollen_classification/output_21_0.png' | relative_url }}" alt="" title="Random examples."/>
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img
+/pollen_classification/output_21_0.png' | relative_url }}" alt="" title="Random examples."/>
     </div>
 </div>
 <div class="caption">
