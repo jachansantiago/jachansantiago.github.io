@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: page
+title: blog
 pagination:
   enabled: true
   collection: posts
@@ -14,21 +15,18 @@ pagination:
 
 <div class="post">
 
-  <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
-  </div>
-
   <ul class="post-list">
     {% for post in paginator.posts %}
-    <div class="container">
+    <div class="container mt-5">
+
+      <div class="row">
+        <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
+      </div>
   
       <div class="row">
-      <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+        <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
       </div>
-      <div class="row">
-      <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
-    </div>
+      
     
     <div class="row no-gutters">
       <div class="col-sm-3" style="background: #ffffff;">
