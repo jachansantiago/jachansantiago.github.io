@@ -20,16 +20,32 @@ pagination:
   </div>
 
 
+
+
+
   <ul class="post-list">
     {% for post in paginator.posts %}
-      <li>
-        <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
-        <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
-        <p>{{ post.description }}</p>
-      </li>
+    <div class="row no-gutters">
+      
+      <div class="col-md-3" style="background: #ffffff;">
+          {% if post.img %}
+              <img src="{{ post.img | relative_url }}" class="card-img" alt="project thumbnail">
+          {% endif %}
+      </div>
+
+      <div class="col-md-9">    
+        <div class="card-body">
+          <h3><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+              <p class="post-meta">{{ post.date | date: '%B %-d, %Y' }}</p>
+              <p>{{ post.description }}</p>
+        </div>
+        </div>
+      
+  </div>
     {% endfor %}
   </ul>
 
+  
+
   {% include pagination.html %}
 
-</div>
