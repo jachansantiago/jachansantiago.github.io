@@ -223,15 +223,15 @@ history_df = pd.DataFrame(history.history, index=history.epoch)
     140/140 [==============================] - 9s 63ms/step - loss: 2.5461e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1306 - val_accuracy: 0.9722 - val_f1_score: 0.9393
 
 
+### Check Training 
+Seems that our model is not overfitting both training and validation curves decrease over time.
+
 
 ```python
 plt.plot(history_df["loss"], label="loss");
 plt.plot(history_df["val_loss"], label="val_loss");
 plt.legend();
 ```
-
-### Check Training 
-Seems that our model is not overfitting both training and validation curves decrease over time.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
@@ -270,7 +270,7 @@ images = tf.concat([item for item in X_valid], axis = 0)
 cm = confusion_matrix(correct_labels, predicted_labels > 0.5, normalize='all')
 ConfusionMatrixDisplay(cm, display_labels=["No Pollen", "Pollen"]).plot()
 ```
-From the confussion matrix we can see that our model do not have false positive. There some false negatives but in general our pollen model is very accurate. Also, we can see that our validation dataset is unbalanced where 76% of the data belongs to `No pollen` class.
+From the confussion matrix we can see that our model do not have false positives. There some false negatives but in general our pollen model is very accurate. Also, we can see that our validation dataset is unbalanced where 76% of the data belongs to `No pollen` class.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
@@ -297,11 +297,6 @@ print(classification_report(correct_labels, predicted_labels > 0.5 ))
     weighted avg       0.97      0.97      0.97      1117
     
 
-
-
-```python
-model.save("pollen_model.tf")
-```
 
 
 #### Check Predictions
