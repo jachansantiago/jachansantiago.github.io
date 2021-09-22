@@ -40,4 +40,13 @@ html[data-theme='dark'] {
   .fa-moon {
     display : none;
   }
+
+  .card {
+    background-color: rgb(79, 79, 79);
+    color: rgb(255, 255, 255);
+  }
+
+  .card-text{
+    color: rgb(255, 255, 255)  !important;
+  }
 }

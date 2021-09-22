@@ -32,6 +32,45 @@
 
 // TODO: redefine content layout.
 
+.hoverable {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.55s ease-in-out;
+  transition: all 0.55s ease-in-out;
+}
+.card {
+  font-weight: 400;
+  border: 0;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 16%), 0 2px 10px 0 rgba(0, 0, 0, 12%);
+  box-shadow: none;
+}
+
+
+element.style {
+  max-width: 750px;
+}
+
+.mb-3, .my-3 {
+  margin-bottom: 1rem!important;
+}
+.card {
+  box-shadow: none;
+}
+
+.card:hover{
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 16%), 0 2px 10px 0 rgba(0, 0, 0, 12%);
+}
+
+// @media (prefers-color-scheme: dark) {
+//   .card {
+//     background-color: rgb(79, 79, 79);
+//     color: rgb(255, 255, 255);
+//   }
+
+//   .card-text{
+//     color: rgb(255, 255, 255)  !important;
+//   }
+// }
 
 /******************************************************************************
  * Publications
