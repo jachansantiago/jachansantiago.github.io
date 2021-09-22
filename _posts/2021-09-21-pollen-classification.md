@@ -233,9 +233,6 @@ plt.plot(history_df["val_loss"], label="val_loss");
 plt.legend();
 ```
 
-### Check Training 
-Seems that our model is not overfitting both training and validation curves decrease over time.
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
         <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/pollen_classification/output_15_0.png' | relative_url }}" alt="" title="Training and validation loss."/>
@@ -300,11 +297,6 @@ print(classification_report(correct_labels, predicted_labels > 0.5 ))
     weighted avg       0.97      0.97      0.97      1117
     
 
-
-
-```python
-model.save("pollen_model.tf")
-```
 
 
 #### Check Predictions
