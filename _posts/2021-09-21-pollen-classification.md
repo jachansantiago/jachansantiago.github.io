@@ -171,11 +171,10 @@ loss = - \frac{1}{N} \sum_i^N y_i \log{\hat{y}_i} + (1 - y_i) \log (1 - \hat{y}_
 $$
 
 
-
 ```python
 model.compile(loss='binary_crossentropy', optimizer="adam",metrics=['accuracy', F1Score(num_classes=1, threshold=0.5)])
 ```
-
+ We used `F1Score` metric to have a good idea of the performance of the model because our pollen dataset is unbalanced (we have a lot more images labeled as `No pollen` than `Pollen`.)
 
 ```python
 history = model.fit(train_dataset, epochs=20, validation_data=valid_dataset)
@@ -231,6 +230,9 @@ plt.plot(history_df["val_loss"], label="val_loss");
 plt.legend();
 ```
 
+### Check Training 
+Seems that our model is not overfitting both training and validation curves decrease over time.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
         <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/pollen_classification/output_15_0.png' | relative_url }}" alt="" title="Training and validation loss."/>
@@ -268,6 +270,7 @@ images = tf.concat([item for item in X_valid], axis = 0)
 cm = confusion_matrix(correct_labels, predicted_labels > 0.5, normalize='all')
 ConfusionMatrixDisplay(cm, display_labels=["No Pollen", "Pollen"]).plot()
 ```
+From the confussion matrix we can see that our model do not have false positive. There some false negatives but in general our pollen model is very accurate. Also, we can see that our validation dataset is unbalanced where 76% of the data belongs to `No pollen` class.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0 text-center">
@@ -336,7 +339,7 @@ for i, idx in enumerate(random_idx):
 
 #### Check Hard Cases
 
-To plot the hard cases we sorted the errors in descending order and plot the top 32 images with greater error.
+To plot the hard cases we sorted the errors in descending order and plot the top 32 images with greater error. Plotting the hard cases we can see our model false negatives. Some of the examples seems hard even for humans.
 
 
 ```python
@@ -367,4 +370,8 @@ for i, idx in enumerate(hard_cases_indxes[:32]):
 <div class="caption">
     Hard cases examples.
 </div>
+
+### Conclusion
+
+We trained our pollen model using the Tensorflow/Keras framework. We obtained a very accurate model without any false positive case on the validation dataset, but with few false negatives examples. Some of these false negatives examples are hard even for humans.
 
