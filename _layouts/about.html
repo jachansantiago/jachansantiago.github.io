@@ -15,7 +15,7 @@ layout: default
     {% if page.profile %}
     <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
       {% if page.profile.image_large %}
-        <img class="img-fluid z-depth-1 rounded" src="{{ page.profile.image_large | prepend: '/assets/img/' | relative_url }}" srcset="{{ page.profile.image_large | prepend: '/assets/img/' | relative_url }} 410w, {{ page.profile.image_small | prepend: '/assets/img/' | relative_url }} 300w" sizes="50vw">
+        <img class="img-fluid z-depth-1 rounded" width=410 height=410 src="{{ page.profile.image_large | prepend: '/assets/img/' | relative_url }}" srcset="{{ page.profile.image_large | prepend: '/assets/img/' | relative_url }} 410w, {{ page.profile.image_small | prepend: '/assets/img/' | relative_url }} 300w" sizes="50vw">
       {% endif %}
       {% if page.profile.address %}
         <div class="address">
