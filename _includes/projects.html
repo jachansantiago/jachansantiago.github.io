@@ -5,8 +5,8 @@
   <a href="{{ project.url | relative_url }}">
   {% endif %}
     <div class="card hoverable">
-      {% if project.img %}
-      <img src="{{ project.img | relative_url }}" alt="project thumbnail">
+      {% if project.image_large %}
+      <img src="{{ project.image_large | relative_url }}" srcset="{{ project.image_large | relative_url }} 410w, {{ project.image_small | relative_url }} 300w" sizes="50vw" alt="project thumbnail">
       {% endif %}
       <div class="card-body">
         <h2 class="card-title text-lowercase">{{ project.title }}</h2>

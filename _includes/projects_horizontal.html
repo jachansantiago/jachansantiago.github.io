@@ -6,9 +6,9 @@
   {% endif %}
     <div class="card hoverable">
       <div class="row g-0">
-        {% if project.img %}
+        {% if project.image_large %}
         <div class="card-img col-md-6">
-          <img src="{{ project.img | relative_url }}" alt="project thumbnail">
+          <img src="{{ project.image_large | relative_url }}" srcset="{{ project.image_large | relative_url }} 410w, {{ project.image_small | relative_url }} 300w" sizes="50vw" alt="project thumbnail">
         </div>
         <div class="col-md-6">
         {% else %}
