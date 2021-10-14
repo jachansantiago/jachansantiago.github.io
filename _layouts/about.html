@@ -1,5 +1,14 @@
 ---
 layout: default
+
+profile:
+  align: right
+  image_small: /homepage/prof_pic_small.jpg
+  image_large: /homepage/prof_pic_large.jpg
+  address: >
+    <p>At my Home Office </p>
+    <p>in Bayamón, Puerto Rico</p>
+    <!-- <p>on during Covid-19 Lockdown</p> -->
 ---
 
 <div class="post">
@@ -14,8 +23,8 @@ layout: default
   <article>
     {% if page.profile %}
     <div class="profile float-{% if page.profile.align == 'left' %}left{% else %}right{% endif %}">
-      {% if page.profile.image %}
-        <img class="img-fluid z-depth-1 rounded" src="{{ page.profile.image | prepend: '/assets/img/' | relative_url }}">
+      {% if page.profile.image_large %}
+        <img class="img-fluid z-depth-1 rounded" src="{{ page.profile.image_large | prepend: '/assets/img/' | relative_url }}" srcset="{{ page.profile.image_large | prepend: '/assets/img/' | relative_url }} 410w, {{ page.profile.image_small | prepend: '/assets/img/' | relative_url }} 300w" sizes="50vw">
       {% endif %}
       {% if page.profile.address %}
         <div class="address">
