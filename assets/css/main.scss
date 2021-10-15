@@ -48,6 +48,45 @@
 // @import "bootstrap/print";
 
 
+@import "mdb/core/bootstrap/functions";
+@import "mdb/core/bootstrap/variables";
+@import "mdb/core/bootstrap/rfs";
+
+// CORE
+@import "mdb/core/mixins";
+// Your custom variables
+// @import "custom-variables";
+@import "mdb/core/colors";
+@import "mdb/core/variables";
+@import "mdb/core/global";
+@import "mdb/core/helpers";
+@import "mdb/core/typography";
+@import "mdb/core/masks";
+@import "mdb/core/waves";
+
+// FREE
+@import "mdb/free/animations-basic";
+@import "mdb/free/modules/animations-extended/module";
+@import "mdb/free/buttons";
+@import "mdb/free/cards";
+@import "mdb/free/dropdowns";
+// @import "mdb/free/input-group";
+@import "mdb/free/navbars";
+@import "mdb/free/pagination";
+// @import "mdb/free/badges";
+// @import "mdb/free/modals";
+// @import "mdb/free/carousels";
+// @import "mdb/free/forms";
+// @import "mdb/free/msc";
+@import "mdb/free/footers";
+// @import "mdb/free/list-group";
+// @import "mdb/free/tables";
+// @import "mdb/free/depreciated";
+// @import "mdb/free/steppers";
+// @import "mdb/free/loader";
+// @import "mdb/free/treeview";
+
+
 $max-content-width: {{site.max_width}};
 @import "variables";
 @import "themes";
