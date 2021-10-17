@@ -45,7 +45,7 @@ horizontal: false
         </div>
       </div>
     {% else %}
-      <div class="grid">
+      <div class="card-deck">
         {% for project in sorted_projects %}
           {% include projects.html %}
         {% endfor %}
