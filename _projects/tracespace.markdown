@@ -2,8 +2,8 @@
 layout: page
 title: TraceSpace
 description: TraceSpace is a concept to edit digitalized architectural plans based on the analog workflow to correct plans with layers.
-image_small: /assets/img/trace-space/tracespace_small.jpg
-image_large: /assets/img/trace-space/tracespace_large.jpg
+image_small: /assets/img/trace-space/tracespace_small_fixed.jpg
+image_large: /assets/img/trace-space/tracespace_large_fixed.jpg
 github: https://github.com/jachansantiago/trace-space
 importance: 2
 ---

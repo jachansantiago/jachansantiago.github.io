@@ -7,7 +7,7 @@
       <a href="{{ project.url | relative_url }}">
       {% endif %}
       {% if project.image_large %}
-      <img class="card-img-top" width=370 height=250 src="{{ project.image_large | relative_url }}" srcset="{{ project.image_large | relative_url }} 410w, {{ project.image_small | relative_url }} 300w" sizes="50vw" alt="project thumbnail">
+      <img class="card-img-top" width=370 height="auto" src="{{ project.image_large | relative_url }}" srcset="{{ project.image_large | relative_url }} 410w, {{ project.image_small | relative_url }} 300w" sizes="50vw" alt="project thumbnail">
       {% endif %}
     </a>
       <div class="card-body">
