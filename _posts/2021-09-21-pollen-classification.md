@@ -3,6 +3,7 @@ layout: post
 title:  Pollen Classification
 date:   2021-09-21
 description: This post shows how to train a CNN for pollen classification.
+img: /assets/img/pollen_classification/thumbnail.png
 ---
 
 This post shows how to train a convolutional network for pollen classification. We used part of the MobileNetV2 network for feature extraction and one ReLU layer with one sigmoid layer for classification.
@@ -323,8 +324,7 @@ for i, idx in enumerate(random_idx):
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img
-/pollen_classification/output_21_0.png' | relative_url }}" alt="" title="Random examples."/>
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/pollen_classification/output_21_0.png' | relative_url }}" alt="" title="Random examples."/>
     </div>
 </div>
 <div class="caption">
