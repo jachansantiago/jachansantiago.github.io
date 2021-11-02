@@ -299,6 +299,11 @@ print(classification_report(correct_labels, predicted_labels > 0.5 ))
 
 
 
+```python
+model.save("pollen_model.tf")
+```
+
+
 #### Check Predictions
 
 
