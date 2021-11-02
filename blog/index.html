@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 layout: default
+=======
+layout: page
+>>>>>>> 7ae8869 (update blog page)
 title: blog
 pagination:
   enabled: true
@@ -14,11 +18,6 @@ pagination:
 ---
 
 <div class="post">
-
-  <div class="header-bar">
-    <h1>{{ site.blog_name }}</h1>
-    <h2>{{ site.blog_description }}</h2>
-  </div>
 
   <ul class="post-list">
     {% for post in paginator.posts %}
