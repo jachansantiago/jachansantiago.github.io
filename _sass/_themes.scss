@@ -3,8 +3,12 @@
  ******************************************************************************/
  
 :root {
+<<<<<<< HEAD
   --global-bg-color: #{$white-color};
   --global-code-bg-color: #{$code-bg-color-light};
+=======
+  --global-bg-color: #{$grey-color-light};
+>>>>>>> f1ad370 (change backgound color)
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$purple-color};
