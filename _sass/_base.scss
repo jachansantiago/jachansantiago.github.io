@@ -4,6 +4,7 @@
 
 // Typography
 
+<<<<<<< HEAD
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
 }
@@ -12,17 +13,28 @@ hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
+=======
+p, h1, h2, h3, h4, h5, h6, em, div, span, strong {
+  color: var(--global-text-color);
+}
+
+>>>>>>> 79461e7 (recover the last working master)
 a, table.table a {
   color: var(--global-theme-color);
   &:hover {
     color: var(--global-theme-color);
     text-decoration: underline;
   }
+<<<<<<< HEAD
   &:hover:after :not(.nav-item.dropdown) {
+=======
+  &:hover:after {
+>>>>>>> 79461e7 (recover the last working master)
     width: 100%;
   }
 }
 
+<<<<<<< HEAD
 blockquote {
   background: var(--global-bg-color);
   border-left: 2px solid var(--global-theme-color);
@@ -31,6 +43,8 @@ blockquote {
   font-size: 1.2rem;
 }
 
+=======
+>>>>>>> 79461e7 (recover the last working master)
 // Math
 
 .equation {
@@ -47,10 +61,13 @@ blockquote {
   text-align: center;
 }
 
+<<<<<<< HEAD
 // Citation
 .citation, .citation-number {
   color: var(--global-theme-color);
 }
+=======
+>>>>>>> 79461e7 (recover the last working master)
 
 // Profile
 
@@ -96,6 +113,7 @@ blockquote {
 
 .navbar {
   box-shadow: none;
+<<<<<<< HEAD
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
@@ -121,6 +139,14 @@ blockquote {
     }
 }
 .navbar.navbar-light {
+=======
+  border-bottom: 1px solid $grey-color-light;
+  opacity: 0.95;
+  background-color: var(--global-bg-color);
+}
+.navbar.navbar-light {
+  // Remove link decoration
+>>>>>>> 79461e7 (recover the last working master)
   a {
     &:hover {
       text-decoration: none;
@@ -143,6 +169,7 @@ blockquote {
         color: var(--global-hover-color);
       }
   }
+<<<<<<< HEAD
   .navbar-brand.social {
     padding-bottom: 0;
     padding-top: 0;
@@ -156,6 +183,13 @@ blockquote {
         i::before {
           color: var(--global-theme-color);
         }
+=======
+  .contact-icon {
+    font-size: 2rem;
+    a {
+      &:hover {
+        color: var(--global-hover-color);
+>>>>>>> 79461e7 (recover the last working master)
       }
     }
   }
@@ -166,7 +200,11 @@ blockquote {
     display: block;
     width: 22px;
     height: 2px;
+<<<<<<< HEAD
     background-color: var(--global-text-color);
+=======
+    background-color: var(--global-icon-color);
+>>>>>>> 79461e7 (recover the last working master)
     border-radius: 1px;
     margin-bottom: 4px;
     transition: all 0.2s;
@@ -212,6 +250,7 @@ blockquote {
 
 .social {
   text-align: center;
+<<<<<<< HEAD
   .contact-icons {
     font-size: 4rem;
     a {
@@ -223,6 +262,14 @@ blockquote {
         i::before {
           color: var(--global-theme-color);
         }
+=======
+  .contact-icon {
+    font-size: 4rem;
+    a {
+      color: var(--global-icon-color);
+      &:hover {
+        color: var(--global-theme-color);
+>>>>>>> 79461e7 (recover the last working master)
       }
     }
   }
@@ -244,14 +291,22 @@ footer.fixed-bottom {
   a {
     color: var(--global-footer-link-color);
     &:hover {
+<<<<<<< HEAD
       color: var(--global-theme-color);
+=======
+      color: pink;
+>>>>>>> 79461e7 (recover the last working master)
       text-decoration: none;
     }
   }
 }
 
 footer.sticky-bottom {
+<<<<<<< HEAD
   border-top: 1px solid var(--global-divider-color);
+=======
+  border-top: 1px solid $grey-color-light;
+>>>>>>> 79461e7 (recover the last working master)
   padding-top: 40px;
   padding-bottom: 40px;
   font-size: 0.9rem;
@@ -261,7 +316,11 @@ footer.sticky-bottom {
 // Blog
 
 .header-bar {
+<<<<<<< HEAD
   border-bottom: 1px solid var(--global-divider-color);
+=======
+  border-bottom: 1px solid $grey-color-light;
+>>>>>>> 79461e7 (recover the last working master)
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 5rem;
@@ -276,11 +335,16 @@ footer.sticky-bottom {
   margin-bottom: 40px;
   padding: 0;
   li {
+<<<<<<< HEAD
     border-bottom: 1px solid var(--global-divider-color);
+=======
+    border-bottom: 1px solid $grey-color-light;
+>>>>>>> 79461e7 (recover the last working master)
     list-style: none;
     padding-top: 2rem;
     padding-bottom: 2rem;
     .post-meta {
+<<<<<<< HEAD
       color: var(--global-text-color-light);
       font-size: 0.875rem;
       margin-bottom: 0;
@@ -290,6 +354,12 @@ footer.sticky-bottom {
       font-size: 0.875rem;
       padding-top: 0.25rem;
     }
+=======
+      color: $grey-color;
+      font-size: 0.875rem;
+      margin-bottom: 0;
+    }
+>>>>>>> 79461e7 (recover the last working master)
     a {
       color: var(--global-text-color);
       text-decoration: none;
@@ -309,7 +379,10 @@ footer.sticky-bottom {
       }
     }
     &.active .page-link {
+<<<<<<< HEAD
       color: $white-color;
+=======
+>>>>>>> 79461e7 (recover the last working master)
       background-color: var(--global-theme-color);
       &:hover {
         background-color: var(--global-theme-color);
@@ -332,6 +405,7 @@ footer.sticky-bottom {
 // Projects
 
 .projects {
+<<<<<<< HEAD
   a {
     text-decoration: none;
 
@@ -373,6 +447,21 @@ footer.sticky-bottom {
     margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: right;
+=======
+  .grid-item {
+    width: 250px;
+    margin-bottom: 10px;
+    a {
+      color: black;
+      text-decoration: none;
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+  .card img {
+    width: 100%;
+>>>>>>> 79461e7 (recover the last working master)
   }
 }
 
@@ -395,8 +484,13 @@ footer.sticky-bottom {
     }
   }
   h2.year {
+<<<<<<< HEAD
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
+=======
+    color: $grey-color-light;
+    border-top: 1px solid $grey-color-light;
+>>>>>>> 79461e7 (recover the last working master)
     padding-top: 1rem;
     margin-top: 2rem;
     margin-bottom: -2rem;
