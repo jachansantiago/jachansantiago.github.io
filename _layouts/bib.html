@@ -2,7 +2,7 @@
 ---
 
 <div class="row">
-  <div class="col-sm-2 abbr">
+  <!-- <div class="col-sm-2 abbr">
   {% if entry.abbr %}
     {% if site.data.venues[entry.abbr] %}
     <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}" target="_blank">{{entry.abbr}}</a></abbr>
@@ -10,9 +10,9 @@
     <abbr class="badge">{{entry.abbr}}</abbr>
     {% endif %}
   {% endif %}
-  </div>
+  </div> -->
 
-  <div id="{{entry.key}}" class="col-sm-8">
+  <div id="{{entry.key}}" class="col-md-12">
     {% if entry.type == "thesis" %}
       {{reference}}
     {% else %}
@@ -88,6 +88,9 @@
     {% endif %}
     {% if entry.arxiv %}
       <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button" target="_blank">arXiv</a>
+    {% endif %}
+    {% if entry.doi %}
+      <a href="https://dx.doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button" target="_blank">DOI</a>
     {% endif %}
     {% if entry.html %}
       <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button" target="_blank">HTML</a>
