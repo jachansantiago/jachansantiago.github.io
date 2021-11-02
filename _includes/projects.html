@@ -1,9 +1,5 @@
-<div class="grid-item">
-  {% if project.redirect %}
-  <a href="{{ project.redirect }}" target="_blank">
-  {% else %}
-  <a href="{{ project.url | relative_url }}">
-  {% endif %}
+<!-- <div class="grid-item"> -->
+  
     <div class="card hoverable">
       {% if project.img %}
         {% responsive_image_block %}
@@ -11,10 +7,19 @@
           alt: "project thumbnail"
         {% endresponsive_image_block %}
       {% endif %}
+    </a>
       <div class="card-body">
+        {% if project.redirect %}
+        <a href="{{ project.redirect }}" target="_blank">
+        {% else %}
+        <a href="{{ project.url | relative_url }}">
+        {% endif %}
         <h2 class="card-title text-lowercase">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
-        <div class="row ml-1 mr-1 p-0">
+      </a>
+      </div>
+      
+        <div class="card-footer">
           {% if project.github %}
           <div class="github-icon">
             <div class="icon" data-toggle="tooltip" title="Code Repository">
@@ -28,8 +33,8 @@
             {% endif %}
           </div>
           {% endif %}
-        </div>
+        
       </div>
     </div>
-  </a>
-</div>
+ 
+<!-- </div> -->
