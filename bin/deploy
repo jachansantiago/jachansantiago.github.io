@@ -93,13 +93,6 @@ git checkout -b $DEPLOY_BRANCH
 
 # Build site
 bundle exec jekyll build
-<<<<<<< HEAD
-=======
-# echo "prunning css: assets/css/bootstrap.min.css"
-# purgecss --css _sass/bootstrap.min.css --content _site/**/*.html _site/**/*.js _site/assets/css/style.css --output _site/assets/css/bootstrap.min.css
-# echo "prunning css: assets/css/mdb.min.css"
-# purgecss --css _sass/mdb.min.css --content _site/**/*.html _site/**/*.js _site/assets/css/style.css --output _site/assets/css/mdb.min.css
->>>>>>> 3d05647 (fix css purging)
 # Delete and move files
 find . -maxdepth 1 ! -name '_site' ! -name '.git' ! -name 'CNAME' ! -name '.gitignore' -exec rm -rf {} \;
 mv _site/* .
