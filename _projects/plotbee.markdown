@@ -4,8 +4,11 @@ title: plotbee
 description: Plotbee is a library to process, manage and visualize pose-based detections of bees.
 image_small: /assets/img/plotbee/plotbee_small.webp
 image_large: /assets/img/plotbee/plotbee_large.webp
+# image: /assets/img/plotbee/plotbee_large.webp
+image: assets/img/plotbee/plotbee_large.webp
 github: https://github.com/jachansantiago/plotbee
 importance: 1
+horizontal: true
 ---
 
 

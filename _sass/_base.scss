@@ -332,7 +332,7 @@ footer.sticky-bottom {
 
 .projects {
   a {
-    text-decoration: none;
+    // text-decoration: none;
 
     &:hover {
       .card-title {
@@ -346,9 +346,13 @@ footer.sticky-bottom {
       width: 100%;
     }
     .card-title {
-      color: $black-color;
+      // color: $black-color;
     }
   }
+  /* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 25px 0 rgba(0,0,0,0.2);
+}
 
   .card-item {
     width: auto;

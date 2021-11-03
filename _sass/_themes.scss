@@ -1,9 +1,9 @@
 /*******************************************************************************
  * Themes
  ******************************************************************************/
- 
-:root {
-  --global-bg-color: #{$white-color};
+
+ :root {
+  --global-bg-color: #{$grey-color-light};
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
@@ -36,7 +36,7 @@ html[data-theme='dark'] {
   --global-footer-text-color: #{$grey-color-dark};
   --global-footer-link-color: #{$black-color};
   --global-distill-app-color: #{$grey-color-light};
-  --global-divider-color: #424246;
+  --global-divider-color: #{$grey-color-light};
 
   .fa-sun {
     padding-left: 10px;
@@ -126,3 +126,4 @@ html[data-theme='dark'] {
 .highlight .vg { color: #40ffff } /* Name.Variable.Global */
 .highlight .vi { color: #40ffff } /* Name.Variable.Instance */
 .highlight .il { color: #3677a9 } /* Literal.Number.Integer.Long */
+}

@@ -6,8 +6,7 @@ description: Aren't the machines too smart to be supervised?
 
 profile:
   align: right
-  image_small: homepage/prof_pic_small.jpg
-  image_large: homepage/prof_pic_large.jpg
+  image: about/prof_pic_medium.jpeg
   address: >
     <p>At my Home Office </p>
     <p>in Bayamón, Puerto Rico</p>

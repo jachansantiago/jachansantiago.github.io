@@ -1,13 +1,14 @@
 <!-- <div class="grid-item"> -->
   
     <div class="card hoverable">
-      {% if project.img %}
+      <a href="{{ project.url | relative_url }}">
+      {% if project.image %}
         {% responsive_image_block %}
-          path: {{ project.img }}
+          path: {{ project.image }}
           alt: "project thumbnail"
         {% endresponsive_image_block %}
       {% endif %}
-    </a>
+      </a>
       <div class="card-body">
         {% if project.redirect %}
         <a href="{{ project.redirect }}" target="_blank">
