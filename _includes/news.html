@@ -1,21 +1,22 @@
 <div class="news">
   <h2>news</h2>
   {% if site.news  %}
-    <div class="table-responsive">
-      <table class="table table-sm table-borderless">
+    <div class="container">
+      <!-- <table class="table table-sm table-borderless"> -->
       {% assign news = site.news | reverse %}
       {% for item in news limit: site.news_limit %}
-        <tr>
-          <th class="col-2 align-baseline" scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
-          <td>
+        <div class="row">
+          <div class="col-sm-12 col-md-2" >{{ item.date | date: "%b %-d, %Y" }}</div>
+          <div class="col-sm-12 col-md-10" >
             {% if item.inline %}
               {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
             {% else %}
               <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
             {% endif %}
+          </div>
           </td>
         </tr>
-        <tr class="row mt-3"></tr>
+        <div class="row mt-3"></div>
       {% endfor %}
       </table>
     </div>
