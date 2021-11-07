@@ -20,8 +20,8 @@ Imagine a simple case where you are designing an application to know if today is
 <div class="container mt-5">
     {% responsive_image_block %}
     path: {{ "data.png" | prepend: 'assets/img/machine-learning-intuition/' }}
-    class: "img-fluid center"
-    style: "max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
+    class: "img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3"
+    style: "background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
     {% endresponsive_image_block %}
     <div class="caption">
         Figure 1: Precipitation probability versus rip currents by good/bad day class.
@@ -34,31 +34,31 @@ But how to formalize this pattern? First, we need to define what is a decision f
 
 <div class="container mt-5">
     <div class="row">
-    <div class="col-lg-4 pl-0 pr-0">
+    <div class="col-lg-4">
     {% responsive_image_block %}
     path: {{ "decision1.png" | prepend: 'assets/img/machine-learning-intuition/' }}
-    class: "img-fluid"
-    style: "max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
+    class: "img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3"
+    style: "background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
     {% endresponsive_image_block %}
     <div class="caption">
         a): Simple Decision Function.
     </div>
     </div>
-    <div class="col-lg-4 pl-0 pr-0">
+    <div class="col-lg-4">
     {% responsive_image_block %}
     path: {{ "decision2.png" | prepend: 'assets/img/machine-learning-intuition/' }}
-    class: "img-fluid"
-    style: "max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
+    class: "img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3"
+    style: "background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
     {% endresponsive_image_block %}
     <div class="caption">
         b): Complex Decision Function.
     </div>
     </div>
-    <div class="col-lg-4 pl-0 pr-0">
+    <div class="col-lg-4">
     {% responsive_image_block %}
     path: {{ "decision3.png" | prepend: 'assets/img/machine-learning-intuition/' }}
-    class: "img-fluid"
-    style: "max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
+    class: "img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3"
+    style: "background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
     {% endresponsive_image_block %}
     <div class="caption">
         c): Very Complex Decision Function.
@@ -76,8 +76,8 @@ In machine learning, there are two things we can have control the model and the 
 <div class="container mt-5">
     {% responsive_image_block %}
     path: {{ "baddata.png" | prepend: 'assets/img/machine-learning-intuition/' }}
-    class: "img-fluid"
-    style: "max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
+    class: "img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3"
+    style: "background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
     {% endresponsive_image_block %}
     <div class="caption">
         Figure 3: Example of bad feature selection.
@@ -100,6 +100,44 @@ Poor training performance indicates underfitting, meaning that your feature repr
 Assume that you have a model that learns how to perform some task, and when you tried to evaluate the model on the testing dataset, you found that it has a poor performance. This situation means that the model learned was capable of memorizing the training but did not generalize well; this is a sign of overfitting, which maybe be due to the high complexity of your model. You could try techniques to avoid overfitting. One of them is to reduce the complexity of your model.
 
 If you encounter a good training and testing performance, you are good to go. Note that the testing performance most of the time is lower than the training performance. Maybe you should try to optimize some models parameter to improve your model performance.
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-lg-4">
+    {% responsive_image_block %}
+    path: {{ "underfitting.png" | prepend: 'assets/img/machine-learning-intuition/' }}
+    class: "img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3"
+    style: "background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
+    {% endresponsive_image_block %}
+    <div class="caption">
+        a): Underfitting.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    {% responsive_image_block %}
+    path: {{ "fitting.png" | prepend: 'assets/img/machine-learning-intuition/' }}
+    class: "img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3"
+    style: "background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
+    {% endresponsive_image_block %}
+    <div class="caption">
+        b): Good Fit.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    {% responsive_image_block %}
+    path: {{ "overfitting.png" | prepend: 'assets/img/machine-learning-intuition/' }}
+    class: "img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3"
+    style: "background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;"
+    {% endresponsive_image_block %}
+    <div class="caption">
+        c): Overfitting.
+    </div>
+    </div>
+    </div>
+    <div class="caption">
+        Figure 4: Examples of fitting.
+    </div>
+</div>
 
 # Conclusion
 
