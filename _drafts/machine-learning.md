@@ -7,13 +7,27 @@ description: This blog introduce machine learning.
 
 # what is machine learning?
 Audience: Freshman-year student
+Theme: The intuition behind machine learning.
+
+The first time that I heard the word machine learning I thought that robots learned task to imitate us toward to performs task. I thought this was magic and difficult. Everything far from reality.
 
 # Introduction
-Machine learning can be summarized by training a model learn from previous learning experiences or data. The data represent about 80-90% of the real problem in machine learning. Most of the data scientist spend 80% of the time with data wrangling. 
+
+Machine learning learns a model or decision function based on previous data.
+
+I believe everyone had been listen a about machine learning and how is changing the industries and science. 
+Machine learning had been accelerating science and industries. 
+
+Protein folding, antibiotic discovery, robust animal behavior monitoring are some examples of how machine learning have been accelerating advances in science. Machine learning had been applied to many industries health, finance and even the software engineering industry. For some tasks that are hard to program, machine learning had changed the paradigms from explicitly programing to train a machine learning model. Andrej Karpathy explained more about this is his blog post titled [Software 2.0](https://link.medium.com/YcPpazSFZkb). 
+
+Seems that machine learning works like magic, but isn't. The purpose of this blog post is to uncover the magic behind of machine learning and answer; how machine learning learn from the data to make decision even in new examples?
+
+The goal of machine learning is to learn a decision function based on training data meanwhile generalize to new examples.
+From this goal there three aspect are crucial for machine learning: 1) the decision function; 2) how efficiently represent the input data?; 3) how measure the generalization of the model? In the next section I will introduce the intuition of this aspects but first a motivation example. 
 
 Example beach day. 
 
-Imagine a simple case where you are designing an application to know if an specific day is a good day to go to the beach? Normally, when I go to the beach there two facts that I check the precipitation probability and the swell size. Figure X shows an example of previos days where the days where labeled as good day (blue dot) and bad day (red dot) to go to the beach. The x-axis shows the precipitation probability and the y-axis shows the swell size. In the graph the the days labeled as good day are clustered on the bottom left which means low precipitation probability and low swell size. 
+Imagine a simple case where you are designing an application to know if an specific day is a good day to go to the beach? Normally, when I go to the beach there two facts that I check: 1) the precipitation probability and 2) the swell size. Figure X shows an example of previos days where the days where labeled as good day (blue dot) and bad day (red dot) to go to the beach. The x-axis shows the precipitation probability and the y-axis shows the swell size. In the graph the the days labeled as good day are clustered on the bottom left which means low precipitation probability and low swell size. 
 
 # Decision Function
 If we see the Figure X, that collect some data points about good and bad days to go to the beach we can see a clear pattern. The pattern looks like this:
