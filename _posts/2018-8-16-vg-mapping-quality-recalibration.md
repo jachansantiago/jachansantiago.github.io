@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Characterizing Mapping Quality Recalibration Approaches in a Variant Graph Genomics Tool
-tags: [vg, mapping quality, machine learning, genomics]
+tags: vg mapping-quality machine-learning genomics
 img: /assets/img/vg_recal/thumbnail.png
 description: This was my research project as part of my summer intership with the BD2K program at UC Santa Cruz Genomics Institute. I was under the supervision of Bendict Paten and Adam Novak.
 ---

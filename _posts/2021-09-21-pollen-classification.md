@@ -4,6 +4,7 @@ title:  Pollen Classification
 date:   2021-09-21
 description: This post shows how to train a CNN for pollen classification.
 img: /assets/img/pollen_classification/thumbnail.png
+tags: plotbee machine-learning pollen classification
 ---
 
 This post shows how to train a convolutional network for pollen classification. We used part of the MobileNetV2 network for feature extraction and one ReLU layer with one sigmoid layer for classification.

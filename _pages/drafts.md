@@ -32,7 +32,7 @@ permalink: /drafts/
       
           
           <div class="row no-gutters">
-            <div class="col-sm-3" style="background: #ffffff;">
+            <div class="col-sm-3 mt-4" style="background: #ffffff;">
                 {% if post.img %}
                     <img src="{{ post.img | relative_url }}" class="card-img" alt="project thumbnail">
                 {% endif %}

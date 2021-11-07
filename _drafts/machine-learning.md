@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Machine Learning
-tags: [ml]
+tags: machine-learning decision-function generalization
 description: "In many applications, machine learning seems to work like magic but isn't magic. The purpose of this blog post is to uncover the magic behind machine learning and answer; how does machine learning learn from the data to make decisions? This blog introduces the intuition of three crucial aspects of machine learning: 1) the decision function; 2) how efficiently represent the input data?; 3) how to measure the model generalization?" 
-img: /assets/img/machine-learning-intuition/decision1.png
+img: /assets/img/machine-learning-intuition/thumbnail.png
 ---
 
 # Introduction
@@ -95,11 +95,6 @@ Now that we have a way to approximate the generalization of a model, you can enc
 2. Good Training and poor testing performance (Overfitting)
 3. Good training and testing performance
 
-Poor training performance indicates underfitting, meaning that your feature representation is not adequate or that the model is not complex enough for the training dataset. If various models do not provide good performance, maybe you should simplify the feature representation by doing feature engineering.
-
-Assume that you have a model that learns how to perform some task, and when you tried to evaluate the model on the testing dataset, you found that it has a poor performance. This situation means that the model learned was capable of memorizing the training but did not generalize well; this is a sign of overfitting, which maybe be due to the high complexity of your model. You could try techniques to avoid overfitting. One of them is to reduce the complexity of your model.
-
-If you encounter a good training and testing performance, you are good to go. Note that the testing performance most of the time is lower than the training performance. Maybe you should try to optimize some models parameter to improve your model performance.
 
 <div class="container mt-5">
     <div class="row">
@@ -138,6 +133,13 @@ If you encounter a good training and testing performance, you are good to go. No
         Figure 4: Examples of fitting.
     </div>
 </div>
+
+Poor training performance indicates underfitting, meaning that your feature representation is not adequate or that the model is not complex enough for the training dataset. If various models do not provide good performance, maybe you should simplify the feature representation by doing feature engineering.
+
+Assume that you have a model that learns how to perform some task, and when you tried to evaluate the model on the testing dataset, you found that it has a poor performance. This situation means that the model learned was capable of memorizing the training but did not generalize well; this is a sign of overfitting, which maybe be due to the high complexity of your model. You could try techniques to avoid overfitting. One of them is to reduce the complexity of your model.
+
+If you encounter a good training and testing performance, you are good to go. Note that the testing performance most of the time is lower than the training performance. Maybe you should try to optimize some models parameter to improve your model performance.
+
 
 # Conclusion
 
