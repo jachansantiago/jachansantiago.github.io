@@ -1,6 +1,6 @@
 ---
 layout: post
-title: An Intuitive Introduction to Machine Learning
+title: Machine Learning
 tags: machine-learning decision-function generalization
 description: "In many applications, machine learning seems to work like magic but isn't magic. The purpose of this blog post is to uncover the magic behind machine learning and answer; how does machine learning learn from the data to make decisions? This blog introduces the intuition of three crucial aspects of machine learning: 1) the decision function; 2) how efficiently represent the input data?; 3) how to measure the model generalization?" 
 img: /assets/img/machine-learning-intuition/thumbnail.png
