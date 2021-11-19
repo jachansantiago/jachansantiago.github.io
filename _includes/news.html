@@ -6,7 +6,7 @@
       {% assign news = site.news | reverse %}
       {% for item in news limit: site.news_limit %}
         <div class="row">
-          <div class="col-sm-12 col-md-2" >{{ item.date | date: "%b %-d, %Y" }}</div>
+          <div class="col-sm-12 col-md-2" ><font size="4"><strong>{{ item.date | date: "%b %-d, %Y" }}</strong></font></div>
           <div class="col-sm-12 col-md-10" >
             {% if item.inline %}
               {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
@@ -14,11 +14,9 @@
               <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
             {% endif %}
           </div>
-          </td>
-        </tr>
         <div class="row mt-3"></div>
+        </div>
       {% endfor %}
-      </table>
     </div>
   {% else %}
     <p>No news so far...</p>
