@@ -28,7 +28,7 @@ Imagine a simple case where you are designing an application to know if today is
     </div>
 </div>
 
-If I ask you, based on today's measurements (grey dot), if today is a good day to go to the beach, what would be the answer?  If you answered yes, you immediately noticed a pattern on the graph; good days are clustered at the bottom left of the graph, therefore because today's dot is in that region, then today should be a good day to go to the beach. But what means to be in the blue region? Well, good days have low precipitation probability and low rip current.
+If I ask you, based on today's measurements (grey dot), if today is a good day to go to the beach, what would be the answer?  If you answered yes, you immediately noticed a pattern on the graph; good days are clustered at the bottom left of the graph, therefore because today's dot is in that region, then today should be a good day to go to the beach. But what mean to be in the blue region? Well, good days have low precipitation probability and low rip current.
 
 But how to formalize this pattern? First, we need to define what is a decision function. A decision function is a function that receives features or measurements as inputs and decides which class to assign based on the training data points. For a given training data could exist many decision functions. This depends on the complexity of the model and the data. Figure 2 shows three different decision functions that are valid for our example training dataset. Figure 2a shows a simple line (Logistic Regression) that divides good day examples from bad day examples.
 
