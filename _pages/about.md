@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: Aren't the machines too smart to be supervised?
+description: Aren't the machines too intelligent to be supervised?
 
 profile:
   align: right
@@ -18,13 +18,12 @@ social: true  # includes social icons at the bottom of the page
 ---
 
 
-I am a graduate student from the applied mathematics program at the University of Puerto Rico, Rio Piedras, and [Puerto Rico LSAMP Bridge to the Doctorate](https://prlsamp.rcse.upr.edu/index.php/home/bridge-to-the-doctorate-program){:target="_blank"} Fellow. As a BigDBee Project member, my research focuses on self-supervised models for the robust re-identification of honeybees in their natural habitat.
 
-Among my research interests are disentangled representations, self-supervised learning, and unsupervised learning with a focus on the animal re-identification towards robust monitoring systems.  
+Hello, my name is Jeffrey Chan, a student from the applied mathematics program at the University of Puerto Rico, Rio Piedras, and [Puerto Rico LSAMP Bridge to the Doctorate Fellow](https://prlsamp.rcse.upr.edu/index.php/home/bridge-to-the-doctorate-program){:target="_blank"}. I am currently working with the [BigDBee Project](https://bigdbee.hpcf.upr.edu/), focusing on self-supervised models for the robust re-identification of honeybees in their natural habitat. Among my research interests are self-supervision, computer vision, and representation learning in order to reduce human supervision.
 
-I received a B.Sc in Computer Science with a double concentration in mathematics at the University of Puerto Rico, Rio Piedras (2019). As ICPC Contestant, my team reached Caribbean finals in two years in a row (2016-2017).
+I received a B.Sc in Computer Science with a double concentration in mathematics at the University of Puerto Rico, Rio Piedras (2019). As ICPC Contestant, my team reached the Caribbean finals two years in a row (2016, 2017).
 
-I love cooking, I am not Gordon Ramsey, but you can find me always improving recipes to make it my own. Between my favorite dishes to cook fettuccini with rib-eye steak, [butter burgers](https://www.youtube.com/watch?v=ZIErqYP8KNU){:target="_blank"}  and my version of chicken chow mein.
+I enjoy cooking, I am not Gordon Ramsey, but you can find me constantly improving recipes to make it my own by mixing with Puerto Rican, Peruvian, and Chinese cuisine. Among my favorite recipes are pesto fettuccini with rib-eye steak, [Peruvian _Lomo Salteado_](https://tasty.co/recipe/peruvian-lomo-saltado), and my version of chicken chow mein with fried plantains.
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
