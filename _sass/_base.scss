@@ -235,13 +235,23 @@ blockquote {
 footer.fixed-bottom {
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
+  span{
+    color: var(--global-footer-text-color);
+    font-size:12px;
+  }
   .container {
+    color: var(--global-footer-text-color);
+    padding-top: 9px;
+    padding-bottom: 8px;
+  }
+  .d-flex {
     color: var(--global-footer-text-color);
     padding-top: 9px;
     padding-bottom: 8px;
   }
   a {
     color: var(--global-footer-link-color);
+    font-size:12px;
     &:hover {
       color: var(--global-theme-color);
       text-decoration: none;

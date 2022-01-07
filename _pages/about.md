@@ -1,9 +1,10 @@
 ---
 layout: about
-title: about
+title: page_titles.about
 permalink: /
 description: Aren't the machines too intelligent to be supervised?
-
+namespace: about
+permalink: /sobre
 profile:
   align: right
   image: about/prof_pic_medium.jpeg

@@ -1,0 +1,11 @@
+en:
+  label: English
+  icon: 🇺🇸
+  current: "Current Language:"
+  change: "Change Language to "
+es:
+  label: Español
+  icon: 🇪🇸
+  current: "Idioma actual:"
+  change: "Cambiar idioma a "
+  

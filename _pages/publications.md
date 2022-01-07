@@ -1,7 +1,10 @@
 ---
 layout: page
+
+namespace: publications
 permalink: /publications/
-title: publications
+permalink_es: /publicaciones/
+title: page_titles.publications
 description:
 years: [2022, 2021, 2020, 2019, 2018]
 nav: true

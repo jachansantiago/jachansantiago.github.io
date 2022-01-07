@@ -1,6 +1,15 @@
 {% if site.footer_fixed %}
 <footer class="fixed-bottom">
-  <div class="container mt-0">
+  {% if site.lang == "en" %}
+    {% capture link1 %}{{ site.baseurl_root }}/es{{ page.url  }}{% endcapture %}
+    {% capture changelang %}es{% endcapture %}
+  {% elsif site.lang == "es" %}
+    {% capture link1 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+    {% capture changelang %}en{% endcapture %}
+  {% endif %}
+  <div class="d-flex justify-content-around flex-wrap">
+    <span>{{ site.data.languages[site.lang].current }} {{ site.data.languages[site.lang].icon }} {{ site.data.languages[site.lang].label }}</span>
+    <span>
     &copy; Copyright {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}.
     {{ site.footer_text }}
     {% if site.impressum_path %}
@@ -9,7 +18,10 @@
     {% if site.last_updated %}
     Last updated: {{ "now" | date: '%B %d, %Y' }}.
     {% endif %}
+  </span>
+    <a href="{{ link1 }}" > <b>  {{ site.data.languages[changelang].change }} {{ site.data.languages[changelang].icon }} {{ site.data.languages[changelang].label }}</b> </a>
   </div>
+ 
 </footer>
 {% else %}
 <footer class="sticky-bottom mt-5">

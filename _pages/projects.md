@@ -1,7 +1,9 @@
 ---
 layout: page
-title: projects
+title: page_titles.projects
+namespace: projects
 permalink: /projects/
+permalink_es: /projectos/
 description: A growing collection of your cool projects.
 nav: true
 display_categories: []

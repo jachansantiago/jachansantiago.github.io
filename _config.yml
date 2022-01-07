@@ -20,6 +20,11 @@ last_updated: false # set to true if you want to display last updated in the foo
 impressum_path:  # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 
 # -----------------------------------------------------------------------------
+# Multilingual Settings
+# -----------------------------------------------------------------------------
+languages: ["en", "es"]
+exclude_from_localizations: ["assets"]
+# -----------------------------------------------------------------------------
 # RSS Feed
 # -----------------------------------------------------------------------------
 # will use title and url fields
@@ -152,6 +157,7 @@ plugins:
   - jekyll-target-blank
   - jekyll-twitter-plugin
   - jemoji
+  - jekyll-multiple-languages-plugin
 
 # Sitemap settings
 defaults:
