@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>
+
+  Jeffrey A. Chan-Santiago
+
+
+  | An Intuitive Introduction to Machine Learning
+
+</title>
+<meta name="description" content="Jeffrey Chan's webpage and blog.
+">
+
+<!-- Open Graph -->
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&family=Lora&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/default.css" />
+
+<!-- Styles -->
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="/blog/2021/machine-learning/">
+
+
+<!-- Dark Mode -->
+<script src="/assets/js/theme.js"></script>
+<script src="/assets/js/dark_mode.js"></script>
+
+
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="https://jachansantiago.com//">
+       <span class="font-weight-bold">Jeffrey</span> A.  Chan-Santiago
+      </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Blog -->
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog/">
+              blog
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                publications
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            <div class="toggle-container">
+              <a id="light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+              </a>
+            </div>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-1">
+      
+
+
+
+
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">An Intuitive Introduction to Machine Learning</h1>
+    <p class="post-meta">November 7, 2021</p>
+    <p class="post-tags">
+      <a href="/blog/2021"> <i class="fas fa-calendar fa-sm"></i> 2021 </a>
+      
+        ·  
+        
+        <a href="/blog/tag/machine-learning">
+          <i class="fas fa-hashtag fa-sm"></i> machine-learning</a>  
+          
+        <a href="/blog/tag/decision-function">
+          <i class="fas fa-hashtag fa-sm"></i> decision-function</a>  
+          
+        <a href="/blog/tag/generalization">
+          <i class="fas fa-hashtag fa-sm"></i> generalization</a>  
+          
+      
+
+      
+
+    </p>
+  </header>
+
+  <article class="post-content" style="text-align: justify; text-justify: inter-word;">
+    <h1 id="introduction">Introduction</h1>
+<p>I believe everyone has heard about machine learning and how it has been accelerating science and industries. Protein folding, antibiotic discovery, and robust animal behavior monitoring are examples of how machine learning has accelerated science advances. Many industries such as finance, health, and even software engineering have been applying machine learning to facilitate, automate, or guide essential processes. Machine learning has changed the paradigms from explicitly programming to training a machine learning model for some tasks that are hard to program. Andrej Karpathy explained more about this in his blog post titled <a href="https://link.medium.com/YcPpazSFZkb" target="_blank" rel="noopener noreferrer">Software 2.0</a>.</p>
+
+<p>In many applications, machine learning seems to work like magic but isn’t magic. The purpose of this blog post is to uncover the magic behind machine learning and answer; how does machine learning learn from the data to make decisions?</p>
+
+<p>Keep in mind that the goal of machine learning is to learn a decision function based on training data meanwhile generalizing to new examples. There are three crucial aspects from this description: 1) the decision function; 2) how efficiently represent the input data?; 3) how to measure the model generalization? In the next section, I will introduce the intuition of these aspects but first a motivation example.</p>
+
+<h1 id="decision-function">Decision Function</h1>
+
+<p>Imagine a simple case where you are designing an application to know if today is a good day to go to the beach? Usually, when I go to the beach, I check two measurements: 1) precipitation probability and 2) rip currents. If we collect these measurements from previous days and plot them, we get the following graph in Figure 1. This graph has labeled examples of good days (blue dots) and bad days (red dots). Note that the x-axis shows the precipitation probability, and the y-axis shows rip currents.</p>
+
+<div class="container mt-5">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/data-1400x657.png" srcset="    /assets/resized/data-480x225.png 480w,    /assets/resized/data-800x376.png 800w,    /assets/resized/data-1400x657.png 1400w,/assets/img/machine-learning-intuition/data.png 3767w">
+
+    <div class="caption">
+        Figure 1: Precipitation probability versus rip currents by good/bad day class.
+    </div>
+</div>
+
+<p>If I ask you, based on today’s measurements (grey dot), if today is a good day to go to the beach, what would be the answer?  If you answered yes, you immediately noticed a pattern on the graph; good days are clustered at the bottom left of the graph, therefore because today’s dot is in that region, then today should be a good day to go to the beach. But what mean to be in the blue region? Well, good days have low precipitation probability and low rip current.</p>
+
+<p>But how to formalize this pattern? First, we need to define what is a decision function. A decision function is a function that receives features or measurements as inputs and decides which class to assign based on the training data points. For a given training data could exist many decision functions. This depends on the complexity of the model and the data. Figure 2 shows three different decision functions that are valid for our example training dataset. Figure 2a shows a simple line (Logistic Regression) that divides good day examples from bad day examples.</p>
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/decision1-1400x662.png" srcset="    /assets/resized/decision1-480x227.png 480w,    /assets/resized/decision1-800x378.png 800w,    /assets/resized/decision1-1400x662.png 1400w,/assets/img/machine-learning-intuition/decision1.png 3767w">
+
+    <div class="caption">
+        a): Simple Decision Function.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/decision2-1400x657.png" srcset="    /assets/resized/decision2-480x225.png 480w,    /assets/resized/decision2-800x376.png 800w,    /assets/resized/decision2-1400x657.png 1400w,/assets/img/machine-learning-intuition/decision2.png 3767w">
+
+    <div class="caption">
+        b): Complex Decision Function.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/decision3-1400x657.png" srcset="    /assets/resized/decision3-480x225.png 480w,    /assets/resized/decision3-800x376.png 800w,    /assets/resized/decision3-1400x657.png 1400w,/assets/img/machine-learning-intuition/decision3.png 3767w">
+
+    <div class="caption">
+        c): Very Complex Decision Function.
+    </div>
+    </div>
+    </div>
+    <div class="caption">
+        Figure 2: Precipitation probability versus rip currents by good/bad day class.
+    </div>
+</div>
+
+<h1 id="feature-representation">Feature Representation</h1>
+<p>In machine learning, there are two things we can have control the model and the data. In this section, I will talk about the more important of both; the data. The data can have multiple representations and features, some relevant and others irrelevant to the target task. It is critical that the model receives enough information to make a good decision. You cannot expect a machine learning model to figure out the solution with irrelevant features or incomplete information.</p>
+
+<p>An example of irrelevant or incomplete information is Figure 3 that shows a graph where the y-axis was changed from precipitation probability to wind speed, which is irrelevant to solving this task. Notice that we introduce an irrelevant feature and remove part of the information relevant to solve this task. In the best case, the model ignores the wind speed features and relies on only rip currents. Depending on just precipitation probability, the model doesn’t have the complete information to make a good choice. The lesson here is that machine learning learns from reasonable patterns but does not make magic from data that does not make sense.</p>
+
+<div class="container mt-5">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/baddata-1400x656.png" srcset="    /assets/resized/baddata-480x225.png 480w,    /assets/resized/baddata-800x375.png 800w,    /assets/resized/baddata-1400x656.png 1400w,/assets/img/machine-learning-intuition/baddata.png 3767w">
+
+    <div class="caption">
+        Figure 3: Example of bad feature selection.
+    </div>
+</div>
+<p>Generally, data scientists spend a considerable amount of time considering which features are relevant to solving the task. It is critical to remove irrelevant features because they can introduce noise to the model. Some features might are not good by themselves but combining them with others and transforming them into new combined features could result in relevant features. This process is called feature engineering, which consists of collecting and transforming certain features to simplify the feature representation of the problem.</p>
+
+<h1 id="generalization">Generalization</h1>
+
+<p>Now that we have a good representation and a good model that learn perfectly the training data. Are we ready to deploy our application to predict data from users? Well, not yet. First, we need to verify if our model can generalize to new data points never seen before. But how can we measure the generalization to all possible future data points? Should we collect the whole possible data points in our training set? The answer is no. Generally, we divide the dataset into two folds: the training set and the testing set. The idea is to evaluate the model on the testing set that contains novel examples that do not appear in the training set to approximate the generalization error.</p>
+
+<p>Now that we have a way to approximate the generalization of a model, you can encounter the following scenarios:</p>
+
+<ol>
+  <li>Poor training and testing performance (Underfitting)</li>
+  <li>Good Training and poor testing performance (Overfitting)</li>
+  <li>Good training and testing performance</li>
+</ol>
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/underfitting-1400x664.png" srcset="    /assets/resized/underfitting-480x228.png 480w,    /assets/resized/underfitting-800x379.png 800w,    /assets/resized/underfitting-1400x664.png 1400w,/assets/img/machine-learning-intuition/underfitting.png 3740w">
+
+    <div class="caption">
+        a): Underfitting.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/fitting-1400x660.png" srcset="    /assets/resized/fitting-480x226.png 480w,    /assets/resized/fitting-800x377.png 800w,    /assets/resized/fitting-1400x660.png 1400w,/assets/img/machine-learning-intuition/fitting.png 3740w">
+
+    <div class="caption">
+        b): Good Fit.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/overfitting-1400x660.png" srcset="    /assets/resized/overfitting-480x226.png 480w,    /assets/resized/overfitting-800x377.png 800w,    /assets/resized/overfitting-1400x660.png 1400w,/assets/img/machine-learning-intuition/overfitting.png 3740w">
+
+    <div class="caption">
+        c): Overfitting.
+    </div>
+    </div>
+    </div>
+    <div class="caption">
+        Figure 4: Examples of fitting.
+    </div>
+</div>
+
+<p>Poor training performance indicates underfitting, meaning that your feature representation is not adequate or that the model is not complex enough for the training dataset. If various models do not provide good performance, maybe you should simplify the feature representation by doing feature engineering.</p>
+
+<p>Assume that you have a model that learns how to perform some task, and when you tried to evaluate the model on the testing dataset, you found that it has a poor performance. This situation means that the model learned was capable of memorizing the training but did not generalize well; this is a sign of overfitting, which maybe be due to the high complexity of your model. You could try techniques to avoid overfitting. One of them is to reduce the complexity of your model.</p>
+
+<p>If you encounter a good training and testing performance, you are good to go. Note that the testing performance most of the time is lower than the training performance. Maybe you should try to optimize some models parameter to improve your model performance.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>In this introductory post about machine learning, we discussed how decision function uses training data to make decisions. We made an emphasis on how the input data representation could affect your model performance. Also, we introduce the testing set as a way to approximate the generalization error.  I hope that after this post, you now have good intuition and understand how machine learning works.</p>
+
+  </article>
+
+  
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    © Copyright 2025 Jeffrey A. Chan-Santiago.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+
+    
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script> -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+
+
+<!-- Medium Zoom JS -->
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="/assets/js/zoom.js"></script>
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+  
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+
+<script async type="text/javascript" id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Cookie Consent by TermsFeed (https://www.TermsFeed.com) -->
+<script type="text/javascript" src="/assets/js/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"headline","consent_type":"express","palette":"light","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false});
+});
+</script>
+
+<!-- Google Analytics -->
+<script type="text/plain" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-V04ZWTRLLP"></script>
+<script type="text/plain" cookie-consent="tracking">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-V04ZWTRLLP');
+</script>
+<!-- end of Google Analytics-->
+
+<noscript>ePrivacy and GPDR Cookie Consent by <a href="https://www.TermsFeed.com/" rel="nofollow">TermsFeed Generator</a></noscript>
+<!-- End Cookie Consent by TermsFeed (https://www.TermsFeed.com) -->
+
+
+
+
+
+
+</html>
