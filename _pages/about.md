@@ -2,15 +2,12 @@
 layout: about
 title: about
 permalink: /
-description: Aren't the machines too intelligent to be supervised?
+description: How much data is really necessary for strong performance?
 
 profile:
   align: right
   image: about/prof_pic_medium.jpeg
-  address: >
-    <p>At my Home Office </p>
-    <p>in Bayamón, Puerto Rico</p>
-    <!-- <p>on during Covid-19 Lockdown</p> -->
+  address: Orlando, Fl
 
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
