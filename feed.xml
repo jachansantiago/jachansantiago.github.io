@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://jachansantiago.com//feed.xml" rel="self" type="application/atom+xml" /><link href="https://jachansantiago.com//" rel="alternate" type="text/html" /><updated>2025-07-21T16:06:35-04:00</updated><id>https://jachansantiago.com//feed.xml</id><title type="html">blank</title><subtitle>Jeffrey Chan&apos;s webpage and blog.
+</subtitle><entry><title type="html">An opportunity for Puerto Rico Economy</title><link href="https://jachansantiago.com//blog/2022/puerto-rico-software-industry/" rel="alternate" type="text/html" title="An opportunity for Puerto Rico Economy" /><published>2022-01-06T00:00:00-05:00</published><updated>2022-01-06T00:00:00-05:00</updated><id>https://jachansantiago.com//blog/2022/puerto-rico-software-industry</id><content type="html" xml:base="https://jachansantiago.com//blog/2022/puerto-rico-software-industry/"><![CDATA[<div class="container mt-5">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-3 pb-3 pl-3 pr-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/uprrp-800x533.jpeg" srcset="    /assets/resized/uprrp-480x320.jpeg 480w,    /assets/resized/uprrp-800x533.jpeg 800w,/assets/img/puerto-rico-software/uprrp.jpeg 900w" />
+
+    <div class="caption">
+        Universidad de Puerto Rico, Rio Piedras.
+    </div>
+</div>
+
+<p>On a small island as Puerto Rico, the lack of raw materials and expensive transportation limits the industry growth. For this reason, big companies such as Walmart, Tesla, and Apple are hard to create from Puerto Rico. Software companies have been growing since the 2000’s to the point that they have reached the top stock market status. Incredible that in 2021 the <a href="https://caribbeanbusiness.com/top-200-locally-owned-companies-2021/">Caribbean Business top 200 locally owned companies</a> do not have a single software company.</p>
+
+<p>Software companies have their advantages; 1) do not require raw materials, and 2) their distribution it’s almost free because of the internet. Software company’s “raw materials” are disruptive ideas and computational education. Unlike oil, gas, and gold, ideas can grow in any part of Earth. Similarly, computer science can be learned from any part of the world, thanks to the internet. Most software services companies do not require a significant investment initially, but it’s crucial to be disruptive enough to compete globally.</p>
+
+<p>The competition is brutal, especially in regions like Silicon Valley, Shenzhen, and Bengaluru because of its highly developed computational education. But still, Puerto Rican companies had the advantage to tackle unique local niche problems. They are the only ones that can create adequate solutions to the needs of this local niche and then expand to other regions with similar issues. On the other hand, another strategy is researching and developing technologies to obtain an advantage over other companies in the world. Ideas with emerging technologies such as quantum computing, bioinformatics, and artificial intelligence could give market advantages through patents and the commercialization of these advances.</p>
+
+<p>It is no secret that universities with excellent computer science and engineering programs have been very influential since the beginning of Silicon Valley. Higher education and research advances helped create the technology in companies like Apple, Google, Netflix, etc. For example, the PageRank search algorithm was developed as part of research at Stanford University by the founders of Google. Similarly, Puerto Rico has the potential to follow in the footsteps of Silicon Valley if it invests in its education to develop sufficient intellectual capital to develop a thriving software industry.</p>
+
+<p>In conclusion, the software industry is ideal for Puerto Rico because it does not require raw materials or high transportation costs. Although the competition is global, Puerto Rico has two advantages 1) taking advantage of the local niche and 2) developing new technologies. This last strategy requires investing in education to include programs focused on computer science at all levels to increase the number of local companies in the software area. And who knows, maybe we will have our first unicorn (companies valued at or more than 1 Billion dollars) in a short time.</p>]]></content><author><name></name></author><category term="puerto-rico" /><category term="software" /><category term="industry" /><category term="education" /><summary type="html"><![CDATA[Despite the software industry being ideal for Puerto Rico because it does not require raw materials or high transportation costs in 2021, there is no software company among the top 200 local companies, according to Caribbean Business magazine. In this short article, we mention some strategies to grow this industry.]]></summary></entry><entry><title type="html">An Intuitive Introduction to Machine Learning</title><link href="https://jachansantiago.com//blog/2021/machine-learning/" rel="alternate" type="text/html" title="An Intuitive Introduction to Machine Learning" /><published>2021-11-07T00:00:00-04:00</published><updated>2021-11-07T00:00:00-04:00</updated><id>https://jachansantiago.com//blog/2021/machine-learning</id><content type="html" xml:base="https://jachansantiago.com//blog/2021/machine-learning/"><![CDATA[<h1 id="introduction">Introduction</h1>
+<p>I believe everyone has heard about machine learning and how it has been accelerating science and industries. Protein folding, antibiotic discovery, and robust animal behavior monitoring are examples of how machine learning has accelerated science advances. Many industries such as finance, health, and even software engineering have been applying machine learning to facilitate, automate, or guide essential processes. Machine learning has changed the paradigms from explicitly programming to training a machine learning model for some tasks that are hard to program. Andrej Karpathy explained more about this in his blog post titled <a href="https://link.medium.com/YcPpazSFZkb">Software 2.0</a>.</p>
+
+<p>In many applications, machine learning seems to work like magic but isn’t magic. The purpose of this blog post is to uncover the magic behind machine learning and answer; how does machine learning learn from the data to make decisions?</p>
+
+<p>Keep in mind that the goal of machine learning is to learn a decision function based on training data meanwhile generalizing to new examples. There are three crucial aspects from this description: 1) the decision function; 2) how efficiently represent the input data?; 3) how to measure the model generalization? In the next section, I will introduce the intuition of these aspects but first a motivation example.</p>
+
+<h1 id="decision-function">Decision Function</h1>
+
+<p>Imagine a simple case where you are designing an application to know if today is a good day to go to the beach? Usually, when I go to the beach, I check two measurements: 1) precipitation probability and 2) rip currents. If we collect these measurements from previous days and plot them, we get the following graph in Figure 1. This graph has labeled examples of good days (blue dots) and bad days (red dots). Note that the x-axis shows the precipitation probability, and the y-axis shows rip currents.</p>
+
+<div class="container mt-5">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/data-1400x657.png" srcset="    /assets/resized/data-480x225.png 480w,    /assets/resized/data-800x376.png 800w,    /assets/resized/data-1400x657.png 1400w,/assets/img/machine-learning-intuition/data.png 3767w" />
+
+    <div class="caption">
+        Figure 1: Precipitation probability versus rip currents by good/bad day class.
+    </div>
+</div>
+
+<p>If I ask you, based on today’s measurements (grey dot), if today is a good day to go to the beach, what would be the answer?  If you answered yes, you immediately noticed a pattern on the graph; good days are clustered at the bottom left of the graph, therefore because today’s dot is in that region, then today should be a good day to go to the beach. But what mean to be in the blue region? Well, good days have low precipitation probability and low rip current.</p>
+
+<p>But how to formalize this pattern? First, we need to define what is a decision function. A decision function is a function that receives features or measurements as inputs and decides which class to assign based on the training data points. For a given training data could exist many decision functions. This depends on the complexity of the model and the data. Figure 2 shows three different decision functions that are valid for our example training dataset. Figure 2a shows a simple line (Logistic Regression) that divides good day examples from bad day examples.</p>
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/decision1-1400x662.png" srcset="    /assets/resized/decision1-480x227.png 480w,    /assets/resized/decision1-800x378.png 800w,    /assets/resized/decision1-1400x662.png 1400w,/assets/img/machine-learning-intuition/decision1.png 3767w" />
+
+    <div class="caption">
+        a): Simple Decision Function.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/decision2-1400x657.png" srcset="    /assets/resized/decision2-480x225.png 480w,    /assets/resized/decision2-800x376.png 800w,    /assets/resized/decision2-1400x657.png 1400w,/assets/img/machine-learning-intuition/decision2.png 3767w" />
+
+    <div class="caption">
+        b): Complex Decision Function.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/decision3-1400x657.png" srcset="    /assets/resized/decision3-480x225.png 480w,    /assets/resized/decision3-800x376.png 800w,    /assets/resized/decision3-1400x657.png 1400w,/assets/img/machine-learning-intuition/decision3.png 3767w" />
+
+    <div class="caption">
+        c): Very Complex Decision Function.
+    </div>
+    </div>
+    </div>
+    <div class="caption">
+        Figure 2: Precipitation probability versus rip currents by good/bad day class.
+    </div>
+</div>
+
+<h1 id="feature-representation">Feature Representation</h1>
+<p>In machine learning, there are two things we can have control the model and the data. In this section, I will talk about the more important of both; the data. The data can have multiple representations and features, some relevant and others irrelevant to the target task. It is critical that the model receives enough information to make a good decision. You cannot expect a machine learning model to figure out the solution with irrelevant features or incomplete information.</p>
+
+<p>An example of irrelevant or incomplete information is Figure 3 that shows a graph where the y-axis was changed from precipitation probability to wind speed, which is irrelevant to solving this task. Notice that we introduce an irrelevant feature and remove part of the information relevant to solve this task. In the best case, the model ignores the wind speed features and relies on only rip currents. Depending on just precipitation probability, the model doesn’t have the complete information to make a good choice. The lesson here is that machine learning learns from reasonable patterns but does not make magic from data that does not make sense.</p>
+
+<div class="container mt-5">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/baddata-1400x656.png" srcset="    /assets/resized/baddata-480x225.png 480w,    /assets/resized/baddata-800x375.png 800w,    /assets/resized/baddata-1400x656.png 1400w,/assets/img/machine-learning-intuition/baddata.png 3767w" />
+
+    <div class="caption">
+        Figure 3: Example of bad feature selection.
+    </div>
+</div>
+<p>Generally, data scientists spend a considerable amount of time considering which features are relevant to solving the task. It is critical to remove irrelevant features because they can introduce noise to the model. Some features might are not good by themselves but combining them with others and transforming them into new combined features could result in relevant features. This process is called feature engineering, which consists of collecting and transforming certain features to simplify the feature representation of the problem.</p>
+
+<h1 id="generalization">Generalization</h1>
+
+<p>Now that we have a good representation and a good model that learn perfectly the training data. Are we ready to deploy our application to predict data from users? Well, not yet. First, we need to verify if our model can generalize to new data points never seen before. But how can we measure the generalization to all possible future data points? Should we collect the whole possible data points in our training set? The answer is no. Generally, we divide the dataset into two folds: the training set and the testing set. The idea is to evaluate the model on the testing set that contains novel examples that do not appear in the training set to approximate the generalization error.</p>
+
+<p>Now that we have a way to approximate the generalization of a model, you can encounter the following scenarios:</p>
+
+<ol>
+  <li>Poor training and testing performance (Underfitting)</li>
+  <li>Good Training and poor testing performance (Overfitting)</li>
+  <li>Good training and testing performance</li>
+</ol>
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/underfitting-1400x664.png" srcset="    /assets/resized/underfitting-480x228.png 480w,    /assets/resized/underfitting-800x379.png 800w,    /assets/resized/underfitting-1400x664.png 1400w,/assets/img/machine-learning-intuition/underfitting.png 3740w" />
+
+    <div class="caption">
+        a): Underfitting.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/fitting-1400x660.png" srcset="    /assets/resized/fitting-480x226.png 480w,    /assets/resized/fitting-800x377.png 800w,    /assets/resized/fitting-1400x660.png 1400w,/assets/img/machine-learning-intuition/fitting.png 3740w" />
+
+    <div class="caption">
+        b): Good Fit.
+    </div>
+    </div>
+    <div class="col-lg-4">
+    
+
+
+<img class="img-fluid z-depth-1 rounded  pt-5 pb-4 pl-3" style="background: white; max-width: 700px; width: 100%; display: block; margin-left: auto; margin-right: auto;" src="/assets/resized/overfitting-1400x660.png" srcset="    /assets/resized/overfitting-480x226.png 480w,    /assets/resized/overfitting-800x377.png 800w,    /assets/resized/overfitting-1400x660.png 1400w,/assets/img/machine-learning-intuition/overfitting.png 3740w" />
+
+    <div class="caption">
+        c): Overfitting.
+    </div>
+    </div>
+    </div>
+    <div class="caption">
+        Figure 4: Examples of fitting.
+    </div>
+</div>
+
+<p>Poor training performance indicates underfitting, meaning that your feature representation is not adequate or that the model is not complex enough for the training dataset. If various models do not provide good performance, maybe you should simplify the feature representation by doing feature engineering.</p>
+
+<p>Assume that you have a model that learns how to perform some task, and when you tried to evaluate the model on the testing dataset, you found that it has a poor performance. This situation means that the model learned was capable of memorizing the training but did not generalize well; this is a sign of overfitting, which maybe be due to the high complexity of your model. You could try techniques to avoid overfitting. One of them is to reduce the complexity of your model.</p>
+
+<p>If you encounter a good training and testing performance, you are good to go. Note that the testing performance most of the time is lower than the training performance. Maybe you should try to optimize some models parameter to improve your model performance.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>In this introductory post about machine learning, we discussed how decision function uses training data to make decisions. We made an emphasis on how the input data representation could affect your model performance. Also, we introduce the testing set as a way to approximate the generalization error.  I hope that after this post, you now have good intuition and understand how machine learning works.</p>]]></content><author><name></name></author><category term="machine-learning" /><category term="decision-function" /><category term="generalization" /><summary type="html"><![CDATA[In many applications, machine learning seems to work like magic but isn't magic. The purpose of this blog post is to uncover the magic behind machine learning and answer; how does machine learning learn from the data to make decisions? This blog introduces the intuition of three crucial aspects of machine learning: 1) the decision function; 2) how efficiently represent the input data?; 3) how to measure the model generalization?]]></summary></entry><entry><title type="html">Pollen Classification</title><link href="https://jachansantiago.com//blog/2021/pollen-classification/" rel="alternate" type="text/html" title="Pollen Classification" /><published>2021-09-21T00:00:00-04:00</published><updated>2021-09-21T00:00:00-04:00</updated><id>https://jachansantiago.com//blog/2021/pollen-classification</id><content type="html" xml:base="https://jachansantiago.com//blog/2021/pollen-classification/"><![CDATA[<p>This post shows how to train a convolutional network for pollen classification. We used part of the MobileNetV2 network for feature extraction and one ReLU layer with one sigmoid layer for classification.</p>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+
+<!-- Place this tag where you want the button to render. -->
+<p><a class="github-button" href="https://github.com/jachansantiago/pollenlab" data-color-scheme="no-preference: light; light: light; dark: light;" data-size="large" aria-label="View on Github">View source on Github</a></p>
+
+<!-- [Plotbee](https://github.com/jachansantiago/plotbee){:target="_blank"} -->
+<p><a href="https://colab.research.google.com/github/jachansantiago/pollenlab/blob/master/train_pollen_colab.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+<h4 id="dependecies">Dependecies</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="n">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="n">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+<span class="kn">import</span> <span class="n">tensorflow</span> <span class="k">as</span> <span class="n">tf</span>
+
+<span class="kn">from</span> <span class="n">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Model</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Input</span>
+<span class="kn">from</span> <span class="n">tensorflow.keras.applications</span> <span class="kn">import</span> <span class="n">MobileNetV2</span>
+<span class="kn">from</span> <span class="n">tensorflow_addons.metrics</span> <span class="kn">import</span> <span class="n">F1Score</span>
+<span class="kn">from</span> <span class="n">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">ConfusionMatrixDisplay</span>
+</code></pre></div></div>
+
+<h2 id="dataset-functions">Dataset Functions</h2>
+
+<p>Here we are using the <a href="https://www.tensorflow.org/api_docs/python/tf/keras/utils/image_dataset_from_directory">tf.keras.preprocessing.image_dataset_from_directory</a> function to load the dataset from the <code class="language-plaintext highlighter-rouge">images/</code> directory. The labels of the images are inferred by the name of the folder that contains them.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>images/
+...NP/
+......a_image_1.jpg
+......a_image_2.jpg
+...P/
+......b_image_1.jpg
+......b_image_2.jpg
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">normalize_image</span><span class="p">(</span><span class="n">image</span><span class="p">,</span><span class="n">label</span><span class="p">):</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">cast</span><span class="p">(</span><span class="n">image</span><span class="o">/</span><span class="mf">255.</span> <span class="p">,</span><span class="n">tf</span><span class="p">.</span><span class="n">float32</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">image</span><span class="p">,</span><span class="n">label</span>
+
+<span class="n">train_dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">preprocessing</span><span class="p">.</span><span class="nf">image_dataset_from_directory</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">images/</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="sh">"</span><span class="s">inferred</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">label_mode</span><span class="o">=</span><span class="sh">"</span><span class="s">binary</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">color_mode</span><span class="o">=</span><span class="sh">"</span><span class="s">rgb</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+    <span class="n">image_size</span><span class="o">=</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">subset</span><span class="o">=</span><span class="sh">"</span><span class="s">training</span><span class="sh">"</span>
+<span class="p">).</span><span class="nf">map</span><span class="p">(</span><span class="n">normalize_image</span><span class="p">)</span>
+
+<span class="n">valid_dataset</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">preprocessing</span><span class="p">.</span><span class="nf">image_dataset_from_directory</span><span class="p">(</span>
+    <span class="sh">"</span><span class="s">images/</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">labels</span><span class="o">=</span><span class="sh">"</span><span class="s">inferred</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">label_mode</span><span class="o">=</span><span class="sh">"</span><span class="s">binary</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">color_mode</span><span class="o">=</span><span class="sh">"</span><span class="s">rgb</span><span class="sh">"</span><span class="p">,</span>
+    <span class="n">batch_size</span><span class="o">=</span><span class="mi">32</span><span class="p">,</span>
+    <span class="n">image_size</span><span class="o">=</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">),</span>
+    <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+    <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">validation_split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span>
+    <span class="n">subset</span><span class="o">=</span><span class="sh">"</span><span class="s">validation</span><span class="sh">"</span><span class="p">,</span>
+<span class="p">).</span><span class="nf">map</span><span class="p">(</span><span class="n">normalize_image</span><span class="p">)</span>
+
+</code></pre></div></div>
+
+<p>Here we plot some examples to see how are the images in this dataset. We can identify variations on bee pose and size, illumination, rotation and etc.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">ax</span><span class="p">.</span><span class="nf">ravel</span><span class="p">()</span>
+
+<span class="n">gen</span> <span class="o">=</span> <span class="nf">iter</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">)</span>
+<span class="n">sample_batch</span> <span class="o">=</span> <span class="nf">next</span><span class="p">(</span><span class="n">gen</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="nf">zip</span><span class="p">(</span><span class="n">sample_batch</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">sample_batch</span><span class="p">[</span><span class="mi">1</span><span class="p">])):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">imshow</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+    <span class="n">label_str</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Pollen</span><span class="sh">"</span> <span class="k">if</span> <span class="n">label</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">else</span> <span class="sh">"</span><span class="s">No Pollen</span><span class="sh">"</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_title</span><span class="p">(</span><span class="sh">"</span><span class="s">{}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">label_str</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_xticks</span><span class="p">([])</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_yticks</span><span class="p">([])</span>
+</code></pre></div></div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/pollen_classification/output_6_0.png" alt="" title="Dataset examples." />
+    </div>
+</div>
+<div class="caption">
+    Dataset examples.
+</div>
+
+<h2 id="mobilenetv2-as-feature-extractor">MobileNetV2 as Feature extractor</h2>
+
+<p>In this notebook we are using a MobileNetV2 which comes with keras. You can find other pre-made models on <a href="https://www.tensorflow.org/api_docs/python/tf/keras/applications">tf.keras.applications</a>. More details about the models <a href="https://keras.io/api/applications/">here</a>. We cut the network at the layer <code class="language-plaintext highlighter-rouge">block_6</code> to have a resolution of <code class="language-plaintext highlighter-rouge">12x12</code> for the features.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">backbone</span> <span class="o">=</span> <span class="nc">MobileNetV2</span><span class="p">(</span><span class="n">include_top</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">90</span><span class="p">,</span> <span class="mi">90</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">model_input</span> <span class="o">=</span> <span class="n">backbone</span><span class="p">.</span><span class="nb">input</span>
+<span class="n">model_out</span> <span class="o">=</span> <span class="n">backbone</span><span class="p">.</span><span class="nf">get_layer</span><span class="p">(</span><span class="sh">"</span><span class="s">block_6_expand_relu</span><span class="sh">"</span><span class="p">).</span><span class="n">output</span>
+<span class="n">feature_extractor</span> <span class="o">=</span> <span class="nc">Model</span><span class="p">(</span><span class="n">model_input</span><span class="p">,</span> <span class="n">model_out</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="classification-layer">Classification Layer</h2>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Classifier</span><span class="p">(</span><span class="n">tf</span><span class="p">.</span><span class="n">keras</span><span class="p">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">base_model</span><span class="p">,</span> <span class="n">filters</span><span class="o">=</span><span class="mi">64</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+        <span class="nf">super</span><span class="p">(</span><span class="n">Classifier</span><span class="p">,</span> <span class="n">self</span><span class="p">).</span><span class="nf">__init__</span><span class="p">()</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">backbone</span> <span class="o">=</span> <span class="n">base_model</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">flatten</span> <span class="o">=</span> <span class="nc">Flatten</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="sh">'</span><span class="s">flatten</span><span class="sh">'</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">dense</span> <span class="o">=</span> <span class="nc">Dense</span><span class="p">(</span><span class="n">filters</span><span class="p">,</span><span class="n">activation</span><span class="o">=</span><span class="sh">'</span><span class="s">relu</span><span class="sh">'</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">ReLU_layer</span><span class="sh">"</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">classes</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="nc">Dense</span><span class="p">(</span><span class="n">classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">"</span><span class="s">sigmoid</span><span class="sh">"</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="sh">"</span><span class="s">sigmoid_layer</span><span class="sh">"</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">classifier</span> <span class="o">=</span> <span class="nc">Dense</span><span class="p">(</span><span class="n">classes</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="sh">"</span><span class="s">softmax</span><span class="sh">"</span><span class="p">)</span>
+        <span class="n">self</span><span class="p">.</span><span class="n">model_name</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Classifier</span><span class="sh">"</span>
+        
+    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">data</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">backbone</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">flatten</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">dense</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="n">id_class</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">classifier</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">id_class</span>
+
+
+<span class="n">model</span> <span class="o">=</span> <span class="nc">Classifier</span><span class="p">(</span><span class="n">feature_extractor</span><span class="p">,</span> <span class="n">classes</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/pollen_classification/model.png" alt="" title="Model Diagram." />
+    </div>
+</div>
+<div class="caption">
+    Model Diagram.
+</div>
+
+<h2 id="model-training">Model Training</h2>
+
+<p>The optimization loss of this model is the binary cross-entropy.</p>
+
+\[loss = - \frac{1}{N} \sum_i^N y_i \log{\hat{y}_i} + (1 - y_i) \log (1 - \hat{y}_i)\]
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">model</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="sh">'</span><span class="s">binary_crossentropy</span><span class="sh">'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="sh">"</span><span class="s">adam</span><span class="sh">"</span><span class="p">,</span><span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="sh">'</span><span class="s">accuracy</span><span class="sh">'</span><span class="p">,</span> <span class="nc">F1Score</span><span class="p">(</span><span class="n">num_classes</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">threshold</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)])</span>
+</code></pre></div></div>
+<p>We used <code class="language-plaintext highlighter-rouge">F1Score</code> metric to have a good idea of the performance of the model because our pollen dataset is unbalanced (we have a lot more images labeled as <code class="language-plaintext highlighter-rouge">No pollen</code> than <code class="language-plaintext highlighter-rouge">Pollen</code>.)</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">train_dataset</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="n">valid_dataset</span><span class="p">)</span>
+<span class="n">history_df</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="nc">DataFrame</span><span class="p">(</span><span class="n">history</span><span class="p">.</span><span class="n">history</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">history</span><span class="p">.</span><span class="n">epoch</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Epoch 1/20
+140/140 [==============================] - 12s 67ms/step - loss: 0.5654 - accuracy: 0.9096 - f1_score: 0.8008 - val_loss: 0.6154 - val_accuracy: 0.8317 - val_f1_score: 0.4689
+Epoch 2/20
+140/140 [==============================] - 9s 63ms/step - loss: 0.0517 - accuracy: 0.9839 - f1_score: 0.9656 - val_loss: 0.5985 - val_accuracy: 0.8335 - val_f1_score: 0.4775
+Epoch 3/20
+140/140 [==============================] - 9s 62ms/step - loss: 0.0241 - accuracy: 0.9915 - f1_score: 0.9819 - val_loss: 0.3709 - val_accuracy: 0.9042 - val_f1_score: 0.7540
+Epoch 4/20
+140/140 [==============================] - 9s 63ms/step - loss: 0.0071 - accuracy: 0.9987 - f1_score: 0.9972 - val_loss: 0.3563 - val_accuracy: 0.9141 - val_f1_score: 0.7848
+Epoch 5/20
+140/140 [==============================] - 9s 63ms/step - loss: 0.0074 - accuracy: 0.9975 - f1_score: 0.9948 - val_loss: 0.3406 - val_accuracy: 0.9096 - val_f1_score: 0.7710
+Epoch 6/20
+140/140 [==============================] - 9s 61ms/step - loss: 0.0034 - accuracy: 0.9996 - f1_score: 0.9991 - val_loss: 0.4709 - val_accuracy: 0.8962 - val_f1_score: 0.7277
+Epoch 7/20
+140/140 [==============================] - 9s 62ms/step - loss: 8.3022e-04 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.3459 - val_accuracy: 0.9194 - val_f1_score: 0.8009
+Epoch 8/20
+140/140 [==============================] - 9s 64ms/step - loss: 2.3191e-04 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.2589 - val_accuracy: 0.9364 - val_f1_score: 0.8493
+Epoch 9/20
+140/140 [==============================] - 9s 62ms/step - loss: 1.4356e-04 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.2349 - val_accuracy: 0.9409 - val_f1_score: 0.8613
+Epoch 10/20
+140/140 [==============================] - 9s 63ms/step - loss: 9.4333e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1998 - val_accuracy: 0.9508 - val_f1_score: 0.8871
+Epoch 11/20
+140/140 [==============================] - 9s 62ms/step - loss: 8.5224e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1852 - val_accuracy: 0.9552 - val_f1_score: 0.8984
+Epoch 12/20
+140/140 [==============================] - 9s 62ms/step - loss: 6.3893e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1726 - val_accuracy: 0.9597 - val_f1_score: 0.9095
+Epoch 13/20
+140/140 [==============================] - 9s 62ms/step - loss: 5.8994e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1611 - val_accuracy: 0.9624 - val_f1_score: 0.9160
+Epoch 14/20
+140/140 [==============================] - 9s 63ms/step - loss: 4.3215e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1542 - val_accuracy: 0.9642 - val_f1_score: 0.9203
+Epoch 15/20
+140/140 [==============================] - 9s 63ms/step - loss: 5.1431e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1408 - val_accuracy: 0.9678 - val_f1_score: 0.9289
+Epoch 16/20
+140/140 [==============================] - 9s 62ms/step - loss: 3.9965e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1428 - val_accuracy: 0.9678 - val_f1_score: 0.9289
+Epoch 17/20
+140/140 [==============================] - 9s 63ms/step - loss: 3.5314e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1373 - val_accuracy: 0.9687 - val_f1_score: 0.9310
+Epoch 18/20
+140/140 [==============================] - 9s 62ms/step - loss: 2.9370e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1386 - val_accuracy: 0.9696 - val_f1_score: 0.9331
+Epoch 19/20
+140/140 [==============================] - 9s 63ms/step - loss: 2.4445e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1319 - val_accuracy: 0.9696 - val_f1_score: 0.9331
+Epoch 20/20
+140/140 [==============================] - 9s 63ms/step - loss: 2.5461e-05 - accuracy: 1.0000 - f1_score: 1.0000 - val_loss: 0.1306 - val_accuracy: 0.9722 - val_f1_score: 0.9393
+</code></pre></div></div>
+
+<h3 id="check-training">Check Training</h3>
+<p>Seems that our model is not overfitting both training and validation curves decrease over time.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">history_df</span><span class="p">[</span><span class="sh">"</span><span class="s">loss</span><span class="sh">"</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sh">"</span><span class="s">loss</span><span class="sh">"</span><span class="p">);</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">plot</span><span class="p">(</span><span class="n">history_df</span><span class="p">[</span><span class="sh">"</span><span class="s">val_loss</span><span class="sh">"</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="sh">"</span><span class="s">val_loss</span><span class="sh">"</span><span class="p">);</span>
+<span class="n">plt</span><span class="p">.</span><span class="nf">legend</span><span class="p">();</span>
+</code></pre></div></div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/pollen_classification/output_15_0.png" alt="" title="Training and validation loss." />
+    </div>
+</div>
+<div class="caption">
+    Training and validation loss.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y_pred</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># store predicted labels
+</span><span class="n">y_true</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># store true labels
+</span><span class="n">X_valid</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># store the image
+</span>
+<span class="k">for</span> <span class="n">image_batch</span><span class="p">,</span> <span class="n">label_batch</span> <span class="ow">in</span> <span class="n">valid_dataset</span><span class="p">:</span>
+    <span class="n">X_valid</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">image_batch</span><span class="p">)</span>
+    
+    <span class="n">y_true</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">label_batch</span><span class="p">)</span>
+    <span class="c1"># compute predictions
+</span>    <span class="n">preds</span> <span class="o">=</span> <span class="n">model</span><span class="p">.</span><span class="nf">predict</span><span class="p">(</span><span class="n">image_batch</span><span class="p">)</span>
+    <span class="c1"># append predicted labels
+</span>    <span class="n">y_pred</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">preds</span><span class="p">)</span>
+
+<span class="c1"># convert the true and predicted labels into tensors
+</span><span class="n">correct_labels</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">concat</span><span class="p">([</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">y_true</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">predicted_labels</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">concat</span><span class="p">([</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">y_pred</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">images</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">concat</span><span class="p">([</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">X_valid</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cm</span> <span class="o">=</span> <span class="nf">confusion_matrix</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predicted_labels</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">normalize</span><span class="o">=</span><span class="sh">'</span><span class="s">all</span><span class="sh">'</span><span class="p">)</span>
+<span class="nc">ConfusionMatrixDisplay</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">display_labels</span><span class="o">=</span><span class="p">[</span><span class="sh">"</span><span class="s">No Pollen</span><span class="sh">"</span><span class="p">,</span> <span class="sh">"</span><span class="s">Pollen</span><span class="sh">"</span><span class="p">]).</span><span class="nf">plot</span><span class="p">()</span>
+</code></pre></div></div>
+<p>From the confussion matrix we can see that our model do not have false positives. There some false negatives but in general our pollen model is very accurate. Also, we can see that our validation dataset is unbalanced where 76% of the data belongs to <code class="language-plaintext highlighter-rouge">No pollen</code> class.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0 text-center">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/pollen_classification/output_17_1.png" alt="" title="Confusion Matrix." />
+    </div>
+</div>
+<div class="caption">
+    Confusion Matrix.
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">print</span><span class="p">(</span><span class="nf">classification_report</span><span class="p">(</span><span class="n">correct_labels</span><span class="p">,</span> <span class="n">predicted_labels</span> <span class="o">&gt;</span> <span class="mf">0.5</span> <span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>              precision    recall  f1-score   support
+
+         0.0       0.96      1.00      0.98       846
+         1.0       1.00      0.89      0.94       271
+
+    accuracy                           0.97      1117
+   macro avg       0.98      0.94      0.96      1117
+weighted avg       0.97      0.97      0.97      1117
+</code></pre></div></div>
+
+<h4 id="check-predictions">Check Predictions</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">random_idx</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="nf">permutation</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">images</span><span class="p">))</span>
+<span class="n">random_idx</span> <span class="o">=</span> <span class="n">random_idx</span><span class="p">[:</span><span class="mi">32</span><span class="p">]</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">ax</span><span class="p">.</span><span class="nf">ravel</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">random_idx</span><span class="p">):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">imshow</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">true_label</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Pollen</span><span class="sh">"</span> <span class="k">if</span> <span class="n">correct_labels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="sh">"</span><span class="s">No Pollen</span><span class="sh">"</span>
+    <span class="n">pred_label</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Pollen</span><span class="sh">"</span> <span class="k">if</span> <span class="n">predicted_labels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="sh">"</span><span class="s">No Pollen</span><span class="sh">"</span>
+    
+    <span class="n">title</span> <span class="o">=</span> <span class="n">true_label</span> <span class="o">+</span> <span class="n">pred_label</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_title</span><span class="p">(</span><span class="sh">"</span><span class="s">True: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">true_label</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Pred: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">pred_label</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_xticks</span><span class="p">([])</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_yticks</span><span class="p">([])</span>
+</code></pre></div></div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/pollen_classification/output_21_0.png" alt="" title="Random examples." />
+    </div>
+</div>
+<div class="caption">
+    Random examples.
+</div>
+
+<h4 id="check-hard-cases">Check Hard Cases</h4>
+
+<p>To plot the hard cases we sorted the errors in descending order and plot the top 32 images with greater error. Plotting the hard cases we can see our model false negatives. Some of the examples seems hard even for humans.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">errors</span> <span class="o">=</span> <span class="p">(</span><span class="n">correct_labels</span> <span class="o">-</span> <span class="n">predicted_labels</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">hard_cases_indxes</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">argsort</span><span class="p">(</span><span class="n">errors</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="sh">"</span><span class="s">DESCENDING</span><span class="sh">"</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">hard_cases_indxes</span> <span class="o">=</span> <span class="n">tf</span><span class="p">.</span><span class="nf">reshape</span><span class="p">(</span><span class="n">hard_cases_indxes</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="nf">subplots</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+<span class="n">axes</span> <span class="o">=</span> <span class="n">ax</span><span class="p">.</span><span class="nf">ravel</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">hard_cases_indxes</span><span class="p">[:</span><span class="mi">32</span><span class="p">]):</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">imshow</span><span class="p">(</span><span class="n">images</span><span class="p">[</span><span class="n">idx</span><span class="p">])</span>
+    <span class="n">true_label</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Pollen</span><span class="sh">"</span> <span class="k">if</span> <span class="n">correct_labels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="sh">"</span><span class="s">No Pollen</span><span class="sh">"</span>
+    <span class="n">pred_label</span> <span class="o">=</span> <span class="sh">"</span><span class="s">Pollen</span><span class="sh">"</span> <span class="k">if</span> <span class="n">predicted_labels</span><span class="p">[</span><span class="n">idx</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="sh">"</span><span class="s">No Pollen</span><span class="sh">"</span>
+    
+    <span class="n">title</span> <span class="o">=</span> <span class="n">true_label</span> <span class="o">+</span> <span class="n">pred_label</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_title</span><span class="p">(</span><span class="sh">"</span><span class="s">True: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">true_label</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_xlabel</span><span class="p">(</span><span class="sh">"</span><span class="s">Pred: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">pred_label</span><span class="p">))</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_xticks</span><span class="p">([])</span>
+    <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="nf">set_yticks</span><span class="p">([])</span>
+</code></pre></div></div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/pollen_classification/output_23_0.png" alt="" title="Hard cases examples." />
+    </div>
+</div>
+<div class="caption">
+    Hard cases examples.
+</div>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>We trained our pollen model using the Tensorflow/Keras framework. We obtained a very accurate model without any false positive case on the validation dataset, but with few false negatives examples. Some of these false negatives examples are hard even for humans.</p>]]></content><author><name></name></author><category term="plotbee" /><category term="machine-learning" /><category term="pollen" /><category term="classification" /><summary type="html"><![CDATA[This post shows how to train a CNN for pollen classification.]]></summary></entry><entry><title type="html">Characterizing Mapping Quality Recalibration Approaches in a Variant Graph Genomics Tool</title><link href="https://jachansantiago.com//blog/2018/vg-mapping-quality-recalibration/" rel="alternate" type="text/html" title="Characterizing Mapping Quality Recalibration Approaches in a Variant Graph Genomics Tool" /><published>2018-08-16T00:00:00-04:00</published><updated>2018-08-16T00:00:00-04:00</updated><id>https://jachansantiago.com//blog/2018/vg-mapping-quality-recalibration</id><content type="html" xml:base="https://jachansantiago.com//blog/2018/vg-mapping-quality-recalibration/"><![CDATA[<p>This was my research project as part of my summer intership with the BD2K program at UC Santa Cruz Genomics Institute. I was under the supervision of Bendict Paten and Adam Novak. For more details go to the <a href="https://github.com/jachansantiago/vg_recal">github page</a>.</p>
+
+<h2 id="motivation">Motivation</h2>
+<p>Identifying DNA patterns can tell us useful information about any living being. Closely related organisms have similar DNA, while distantly related organisms have few similarities. Humans have extremely similar genomes; studying differences can help to identify particular variants that can cause illness. Vg is a variant graph-based alignment tool for DNA mapping using graph genome references; these graphs capture variation information from populations, which allows more accurate genome studies.</p>
+
+<h2 id="vg"><a href="https://github.com/vgteam/vg#vg">vg</a></h2>
+
+<p>Vg is a set of tools for working with genome variation graphs. These graphs consist of a set of nodes and edges, where each node represents a DNA sequence; edges, connections between two nodes, can be seen as  concatenations of two sequences. We built VG graphs with genome references and their sequence variations. Because of the variation we have multiple paths through the graph, this means from a particular sequence you could have multiple edges to take.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded" src="/assets/img/vg_recal/vg_graphic.png" alt="" title="Dataset examples." />
+    </div>
+</div>
+<div class="caption">
+    VG Graph.
+</div>
+
+<p>An essential part of vg is mapping DNA reads into the graph; that means searching for the position where the sequence is most similar to the reference graph. Mapping is challenging because genomes can be very repetitive, and in each repetition, sequences can vary. In addition to mapping, vg calculates a mapping quality score; this score is the probability of the mapping being wrong.</p>
+
+<p><em>Graph image was created using <a href="https://github.com/vgteam/sequenceTubeMap">Sequence TubeMap Tool</a></em></p>
+
+<h2 id="approach">Approach</h2>
+<p>In this work, we create and benchmark models to predict the probabilities of mappings being wrong and compare our recalibration models against each other and against the original mapping quality scores. To build our dataset, we simulate sequences with errors from the reference graph and map these new sequences back into the graph, then label those mappings as correct or incorrect. We train our models to calculate when a mapping is wrong, then extract the probabilities from those predictions. Using these probabilities, we calculate mapping quality scores and compare them against the original scores calculated by vg using the Brier score.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded" src="/assets/img/vg_recal/vg_recal_workflow.png" alt="" title="Dataset examples." />
+    </div>
+</div>
+<div class="caption">
+    VG recalibration model training workflow.
+</div>
+
+<h2 id="discussion">Discussion</h2>
+<p>We test 5 different models with logistic regression using mapping quality information, mems, sequences, mems stats and a combination between mems and sequences. Our experiments show that logistic regression with mems improves by 5.23% the original mapping score given by vg in reads of length 100 base pairs but is not able to generalize well across lengths. But the Q-Q plot shows that the mems model has over confidence about its predictions.</p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li>Garrison, Erik, et al. “Sequence variation aware genome references and read mapping with the variation graph toolkit.” bioRxiv (2017): 234856.</li>
+</ul>]]></content><author><name></name></author><category term="vg" /><category term="mapping-quality" /><category term="machine-learning" /><category term="genomics" /><summary type="html"><![CDATA[This was my research project as part of my summer intership with the BD2K program at UC Santa Cruz Genomics Institute. I was under the supervision of Bendict Paten and Adam Novak.]]></summary></entry></feed>
