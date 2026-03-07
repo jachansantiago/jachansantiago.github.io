@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Jeffrey
 middle_name: A.
 last_name: Chan-Santiago
-email: jeffrey.chan@upr.edu
+email: jeffrey.chansantiago@ucf.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Jeffrey Chan's webpage and blog.
 footer_text: >
@@ -50,7 +50,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: jachansantiago # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: jachansantiago # your Twitter handle
+twitter_username: # jachansantiago # your Twitter handle
 linkedin_username: # your LinkedIn user name
 scholar_userid: # your Google Scholar ID
 orcid_id: # your ORCID ID
@@ -65,7 +65,7 @@ wikidata_id: # your wikidata id
 dblp_url: # your DBLP profile url
 stackoverflow_id: #your stackoverflow id
 
-rss_icon: true
+rss_icon: false
 
 contact_note: 
   # You can even add a little note about which of these is the best way to reach you.
@@ -237,7 +237,7 @@ jekyll-diagrams:
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:    true  # enables google analytics
+enable_google_analytics:    false  # enables google analytics
 enable_panelbear_analytics: false  # enables panelbear analytics
 enable_mansory:             true   # enables automatic project cards arangement
 enable_math:                true   # enables math typesetting (uses MathJax)
