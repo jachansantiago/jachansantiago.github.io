@@ -6,6 +6,7 @@ image_small: /assets/img/mgd3/banner.png
 image_large: /assets/img/mgd3/banner.png
 image: assets/img/mgd3/banner.png
 github: https://github.com/jachansantiago/mode_guidance
+redirect: https://jachansantiago.com/mode-guided-distillation/
 importance: 1
 horizontal: true
 ---
