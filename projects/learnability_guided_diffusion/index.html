@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="refresh" content="3; url=https://jachansantiago.com//" />
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>
+
+  Jeffrey A. Chan-Santiago
+
+
+  | Learnability-Guided Diffusion for Dataset Distillation
+
+</title>
+<meta name="description" content="Jeffrey Chan's webpage and blog.
+">
+
+<!-- Open Graph -->
+
+
+
+
+<!-- Bootstrap & MDB -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&display=swap" rel="stylesheet"> -->
+<!-- <link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&family=Lora&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Koh+Santepheap&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/default.css" />
+
+<!-- Styles -->
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="/projects/learnability_guided_diffusion/">
+
+
+<!-- Dark Mode -->
+<script src="/assets/js/theme.js"></script>
+<script src="/assets/js/dark_mode.js"></script>
+
+
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="https://jachansantiago.com//">
+       <span class="font-weight-bold">Jeffrey</span> A.  Chan-Santiago
+      </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Blog -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/blog/">
+              blog
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                publications
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            <div class="toggle-container">
+              <a id="light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+              </a>
+            </div>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-1">
+      <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Learnability-Guided Diffusion for Dataset Distillation</h1>
+    <p class="post-description">CVPR 2026 — A novel approach to dataset distillation that builds datasets incrementally with complementary training signal.</p>
+  </header>
+
+  <article>
+    <div class="links" style="margin-bottom: 1.5rem;">
+  <a href="https://arxiv.org/pdf/2505.18963.pdf" target="_blank" rel="noopener noreferrer">📄 Paper</a>  | 
+  <a href="https://github.com/jachansantiago/mode_guidance" target="_blank" rel="noopener noreferrer">💻 Code</a>  | 
+  <a href="https://arxiv.org/abs/2505.18963" target="_blank" rel="noopener noreferrer">📝 arXiv</a>
+</div>
+
+<p><strong>Authors:</strong>
+<a href="https://jachansantiago.com/">Jeffrey A. Chan Santiago</a><sup>1</sup>,
+<a href="https://ptirupat.github.io/" target="_blank" rel="noopener noreferrer">Praveen Tirupattur</a><sup>1</sup>,
+<a href="https://sites.google.com/view/gauravnayak/" target="_blank" rel="noopener noreferrer">Gaurav Kumar Nayak</a><sup>2</sup>,
+<a href="https://scholar.google.com/citations?user=NIv_aeQAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Gaowen Liu</a><sup>3</sup>,
+<a href="https://www.crcv.ucf.edu/person/mubarak-shah/" target="_blank" rel="noopener noreferrer">Mubarak Shah</a><sup>1</sup></p>
+
+<p><sup>1</sup>Center for Research in Computer Vision, University of Central Florida  
+<sup>2</sup>Mehta Family School of DS &amp; AI, Indian Institute of Technology Roorkee, India  
+<sup>3</sup>Cisco Research</p>
+
+<hr>
+
+<h2 id="abstract">Abstract</h2>
+
+<p><strong>Dataset distillation</strong> has emerged as an effective strategy, significantly reducing training costs and facilitating more efficient model deployment. Recent advances have leveraged generative models to distill datasets by capturing the underlying data distribution.</p>
+
+<p>Unfortunately, existing methods require model fine-tuning with distillation losses to encourage diversity and representativeness. However, these methods do not guarantee sample diversity, limiting their performance.</p>
+
+<p>We propose a <em>mode-guided diffusion model</em> that leverages a pre-trained diffusion model without the need for fine-tuning using distillation losses. Our approach addresses dataset diversity in three stages: <strong>Mode Discovery</strong> to identify distinct data modes, <strong>Mode Guidance</strong> to enhance intra-class diversity, and <strong>Stop Guidance</strong> to mitigate artifacts in synthetic samples that affect performance.</p>
+
+<p>We evaluate our approach on <em>ImageNette</em>, <em>ImageIDC</em>, <em>ImageNet-100</em>, and <em>ImageNet-1K</em>, achieving accuracy improvements of 4.4%, 2.9%, 1.6%, and 1.6%, respectively, over state-of-the-art methods. Our method eliminates the need for fine-tuning diffusion models with distillation losses, significantly reducing computational costs.</p>
+
+<hr>
+
+<h2 id="the-task">The Task</h2>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/mgd3/task.png" alt="Overview of dataset distillation task" title="Dataset Distillation Task">
+    </div>
+</div>
+<div class="caption">
+    Dataset distillation aims to compress the knowledge of a large training dataset into a significantly smaller set of synthetic samples, such that models trained on this distilled dataset can achieve performance comparable to those trained on the full dataset.
+</div>
+
+<ul>
+  <li>
+<strong>Optimization-based Distillation:</strong> Learns a synthetic dataset by directly optimizing it to match the gradient or feature statistics of the original dataset.</li>
+  <li>
+<strong>Generation-based Distillation:</strong> First models the distribution of the original dataset, then generates samples that approximate this learned distribution.</li>
+</ul>
+
+<hr>
+
+<h2 id="motivation">Motivation</h2>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/mgd3/gradient.png" alt="Overview of gradient field in diffusion" title="Gradient Field Overview">
+    </div>
+</div>
+<div class="caption">
+    Overview of the gradient field (score function) during the denoising process in latent diffusion for a specific class <em>c</em>.
+</div>
+
+<p>The original data distribution (blue dots) highlights denser regions via an orange gradient field. To generate a sample, noise is initially sampled from a standard normal distribution.</p>
+
+<ul>
+  <li>
+<strong>(a) DiT:</strong> A pre-trained diffusion model without fine-tuning leads to imbalanced mode likelihoods, resulting in limited sample diversity and frequent repetition of modes.</li>
+  <li>
+<strong>(b) MinMax Diffusion:</strong> Fine-tunes the model to balance mode likelihoods and improve diversity. However, it still suffers from sample redundancies tied to initial noise conditions.</li>
+  <li>
+<strong>(c) MGD³ (Ours):</strong> Introduces mode-guided denoising (colored traces), explicitly steering samples toward distinct modes (stars). After <em>k</em> guided steps, it transitions to unguided denoising (black trace), achieving both high diversity and consistency—without requiring any fine-tuning.</li>
+</ul>
+
+<hr>
+
+<h2 id="our-method">Our Method</h2>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/mgd3/test.png" alt="Overview of the proposed method" title="MGD³ Method Overview">
+    </div>
+</div>
+<div class="caption">
+    Overview of the proposed method for distilled dataset synthesis using a diffusion model. The approach consists of three stages: <em>Mode Discovery</em>, <em>Mode Guidance</em>, and <em>Stop Guidance</em>.
+</div>
+
+<ul>
+  <li>
+<strong>Mode Discovery:</strong> Estimates the <em>N</em> modes of the original dataset in the latent diffusion model’s generative space.</li>
+  <li>
+<strong>Mode Guidance:</strong> Given a mode <em>m_k</em> and class <em>c</em>, the generation process is steered toward the mode <em>m_k</em> for <em>t_stop</em> denoising steps using the pre-trained model.</li>
+  <li>
+<strong>Stop Guidance:</strong> After <em>t_stop</em> steps, the model transitions to standard unguided denoising. Without guidance, generations may follow the unguided path, resulting in redundant or overlapping samples.</li>
+</ul>
+
+<hr>
+
+<h2 id="results">Results</h2>
+
+<h3 id="imagenet-subsets">ImageNet Subsets</h3>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/mgd3/table.png" alt="Table 1: ImageNet subset results" title="ImageNet Subset Results">
+    </div>
+</div>
+<div class="caption">
+    Comparison of performance between pre-trained diffusion models and state-of-the-art methods on ImageNet subsets. Evaluated using the hard-label protocol with ResNet-10 and average pooling.
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/mgd3/table2.png" alt="Table 2: Cross-architecture comparison" title="Cross-Architecture Comparison">
+    </div>
+</div>
+<div class="caption">
+    Comparison with generative prior methods. Evaluation across architectures (AlexNet, VGG11, ResNet18, ViT) and ImageNet subsets (A–E) using the hard-label protocol. Our method outperforms GLaD, H-GLaD, and LM3D in the cross-architecture setup.
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-sm-6 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/mgd3/imagenet1k.png" alt="ImageNet-1K results" title="ImageNet-1K Results">
+    </div>
+</div>
+<div class="caption">
+    Comparison with state-of-the-art methods on ImageNet-1K using the soft-label protocol. Our method achieves state-of-the-art performance, outperforming prior approaches by 1.3% and 1.6% on IPC 10 and IPC 50, respectively.
+</div>
+
+<h3 id="text-to-image-diffusions">Text-to-Image Diffusions</h3>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/mgd3/text-to-image.png" alt="Text-to-Image results" title="Text-to-Image Results">
+    </div>
+</div>
+<div class="caption">
+    Performance of the Text-to-Image model across multiple datasets using the soft-label protocol. Mode guidance significantly improves performance over Stable Diffusion across all datasets, including gains of 3.4% and 2.3% on ImageNet-1K at IPC 10 and IPC 50, respectively.
+</div>
+
+<h3 id="ablations">Ablations</h3>
+
+<div class="row justify-content-center">
+    <div class="col-sm-8 mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/mgd3/ablations.png" alt="Ablation study" title="Ablation Study">
+    </div>
+</div>
+<div class="caption">
+    Ablation study on the components of the proposed method. Evaluated on ImageNette with IPC 10. Each component contributes to performance gains, with Stop Guidance playing a key role in enhancing final accuracy.
+</div>
+
+<hr>
+
+<h2 id="bibtex">BibTeX</h2>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">chan2025mgd3</span><span class="p">,</span>
+  <span class="na">title</span>     <span class="p">=</span> <span class="s">{{MGD}$^3$: Mode-Guided Dataset Distillation using Diffusion Models}</span><span class="p">,</span>
+  <span class="na">author</span>    <span class="p">=</span> <span class="s">{Chan Santiago, Jeffrey A. and Tirupattur, Praveen and Nayak, Gaurav Kumar and Liu, Gaowen and Shah, Mubarak}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 42nd International Conference on Machine Learning (ICML)}</span><span class="p">,</span>
+  <span class="na">year</span>      <span class="p">=</span> <span class="s">{2025}</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    © Copyright 2026 Jeffrey A. Chan-Santiago.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+
+    
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script> -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+
+
+<!-- Medium Zoom JS -->
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="/assets/js/zoom.js"></script>
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+  
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+
+<script async type="text/javascript" id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  
+
+
+
+
+
+</html>

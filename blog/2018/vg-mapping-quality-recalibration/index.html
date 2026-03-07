@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://jachansantiago.com//" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Jeffrey A. Chan-Santiago
 
 
-  | Page not found
+  | Characterizing Mapping Quality Recalibration Approaches in a Variant Graph Genomics Tool
 
 </title>
 <meta name="description" content="Jeffrey Chan's webpage and blog.
@@ -48,7 +48,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22></text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/blog/2018/vg-mapping-quality-recalibration/">
 
 
 <!-- Dark Mode -->
@@ -90,7 +90,7 @@
           </li>
           
           <!-- Blog -->
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -194,17 +194,87 @@
     <!-- Content -->
 
     <div class="container mt-1">
-      <div class="post">
+      
+
+
+
+
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">Characterizing Mapping Quality Recalibration Approaches in a Variant Graph Genomics Tool</h1>
+    <p class="post-meta">August 16, 2018</p>
+    <p class="post-tags">
+      <a href="/blog/2018"> <i class="fas fa-calendar fa-sm"></i> 2018 </a>
+      
+        ·  
+        
+        <a href="/blog/tag/vg">
+          <i class="fas fa-hashtag fa-sm"></i> vg</a>  
+          
+        <a href="/blog/tag/mapping-quality">
+          <i class="fas fa-hashtag fa-sm"></i> mapping-quality</a>  
+          
+        <a href="/blog/tag/machine-learning">
+          <i class="fas fa-hashtag fa-sm"></i> machine-learning</a>  
+          
+        <a href="/blog/tag/genomics">
+          <i class="fas fa-hashtag fa-sm"></i> genomics</a>  
+          
+      
+
+      
+
+    </p>
   </header>
 
-  <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://jachansantiago.com//">here</a>.</p>
+  <article class="post-content" style="text-align: justify; text-justify: inter-word;">
+    <p>This was my research project as part of my summer intership with the BD2K program at UC Santa Cruz Genomics Institute. I was under the supervision of Bendict Paten and Adam Novak. For more details go to the <a href="https://github.com/jachansantiago/vg_recal" target="_blank" rel="noopener noreferrer">github page</a>.</p>
+
+<h2 id="motivation">Motivation</h2>
+<p>Identifying DNA patterns can tell us useful information about any living being. Closely related organisms have similar DNA, while distantly related organisms have few similarities. Humans have extremely similar genomes; studying differences can help to identify particular variants that can cause illness. Vg is a variant graph-based alignment tool for DNA mapping using graph genome references; these graphs capture variation information from populations, which allows more accurate genome studies.</p>
+
+<h2 id="vg"><a href="https://github.com/vgteam/vg#vg" target="_blank" rel="noopener noreferrer">vg</a></h2>
+
+<p>Vg is a set of tools for working with genome variation graphs. These graphs consist of a set of nodes and edges, where each node represents a DNA sequence; edges, connections between two nodes, can be seen as  concatenations of two sequences. We built VG graphs with genome references and their sequence variations. Because of the variation we have multiple paths through the graph, this means from a particular sequence you could have multiple edges to take.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded" src="/assets/img/vg_recal/vg_graphic.png" alt="" title="Dataset examples.">
+    </div>
+</div>
+<div class="caption">
+    VG Graph.
+</div>
+
+<p>An essential part of vg is mapping DNA reads into the graph; that means searching for the position where the sequence is most similar to the reference graph. Mapping is challenging because genomes can be very repetitive, and in each repetition, sequences can vary. In addition to mapping, vg calculates a mapping quality score; this score is the probability of the mapping being wrong.</p>
+
+<p><em>Graph image was created using <a href="https://github.com/vgteam/sequenceTubeMap" target="_blank" rel="noopener noreferrer">Sequence TubeMap Tool</a></em></p>
+
+<h2 id="approach">Approach</h2>
+<p>In this work, we create and benchmark models to predict the probabilities of mappings being wrong and compare our recalibration models against each other and against the original mapping quality scores. To build our dataset, we simulate sequences with errors from the reference graph and map these new sequences back into the graph, then label those mappings as correct or incorrect. We train our models to calculate when a mapping is wrong, then extract the probabilities from those predictions. Using these probabilities, we calculate mapping quality scores and compare them against the original scores calculated by vg using the Brier score.</p>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded" src="/assets/img/vg_recal/vg_recal_workflow.png" alt="" title="Dataset examples.">
+    </div>
+</div>
+<div class="caption">
+    VG recalibration model training workflow.
+</div>
+
+<h2 id="discussion">Discussion</h2>
+<p>We test 5 different models with logistic regression using mapping quality information, mems, sequences, mems stats and a combination between mems and sequences. Our experiments show that logistic regression with mems improves by 5.23% the original mapping score given by vg in reads of length 100 base pairs but is not able to generalize well across lengths. But the Q-Q plot shows that the mems model has over confidence about its predictions.</p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li>Garrison, Erik, et al. “Sequence variation aware genome references and read mapping with the variation graph toolkit.” bioRxiv (2017): 234856.</li>
+</ul>
 
   </article>
+
+  
 
 </div>
 
