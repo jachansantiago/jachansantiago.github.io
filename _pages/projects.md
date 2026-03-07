@@ -45,10 +45,15 @@ horizontal: false
         </div>
       </div>
     {% else %}
-      <div class="card-deck">
+      <!-- <div class="card-deck"> -->
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2">
         {% for project in sorted_projects %}
+        <div class="col mb-4">
           {% include projects.html %}
+           </div>
         {% endfor %}
+         </div>
       </div>
     {% endif %}
 
